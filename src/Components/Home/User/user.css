@@ -1,0 +1,70 @@
+.name{
+    background-color: rgba(255, 255, 255, 0.679);
+    color: black;
+    width: 27%;
+    text-align: left;
+    font-size: 20px;
+    padding: .5% 0 0 1%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.name p{
+    margin-bottom: 0px;
+}
+.selectProparty{
+    background-color: rgba(255, 255, 255, 0.679);
+    color: black;
+    padding-bottom: .2%;
+    padding-left: 2.4%;
+    width: 14.6%;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.selectProparty option{
+    background-color: rgb(179, 179, 179);
+}
+.btnArea{
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+.btnArea:hover{
+    background-color: rgb(19, 19, 255);
+}
+.button{
+    padding-right: 14%!important;
+}
+
+.button .btn{
+    padding: .6% 3%;
+}
+.button .btn:hover{
+    background-color: rgb(19, 19, 255);
+}
+
+/* #### UserForm ####### */
+
+.interface-name{
+    width: 17.5%;
+}
+.create-button{
+    text-align: right;
+    margin-left: 79.7%;
+}
+
+/* ####### User Js ##### */
+
+.user-map{
+    height: 450px;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 2.5%;
+}
+::-webkit-scrollbar{
+    width: 0;
+}

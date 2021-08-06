@@ -1,0 +1,184 @@
+/* ####### All Css ###### */
+.homePage-title{
+    font-size: 50px;
+    font-weight: bold;
+}
+.homePage-p{
+    font-size: 20px;
+}
+ /* #### Welcome css ####   */
+ .welcome-section{
+     
+ }
+.full-name{
+    font-size: 23px;
+    margin: 0 0 1% 0;
+}
+.welcome-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.welcome-img{
+    overflow: hidden;
+
+}
+.welcome-img img{
+    width: 100%;
+    height: 80vh;
+}
+.welcome-animation{
+    position: relative;
+    animation-name: cerusel;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+    
+}
+@keyframes cerusel {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+ /* ####### Information Css ##### */
+ .information-section{
+    background-color: #F7F9FB;
+ }
+ .information-container{
+     width: 90%;
+     margin: 0 auto;
+ }
+ /* #### Service Css ##### */
+ .service-section{
+    width: 90%;
+    margin: 0 auto;
+ }
+ #service-icon{
+     font-size: 50px;
+     border-radius: 50%;
+     padding: 1%;
+     color: white;
+     background-color: rgb(59, 59, 59);
+     transition: .3s ease-in-out;
+ }
+ .service-item:hover #service-icon{
+    border: 4px solid black;
+    color: black;
+     background-color: white;
+ }
+ .item-detail{
+     transition: all 0.2s ease-in-out;
+ }
+ .service-item:hover .item-detail{
+     transform: scale(1.07);
+ }
+ .icon{
+     width: 25%;
+ }
+ .item-detail{
+     width: 100%;
+ }
+ /* ###### Rating Css ##### */
+ .rating-section{
+     padding: 5% 0;
+    background-image: url(./../../../Resorces/pexels-pixabay-531321.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+ }
+ .rating-number{
+    font-size: 45px;
+    margin: 1% 0;
+ }
+ .rating-line{
+    font-size: 17px;
+ }
+ #rating-icon{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    
+ }
+ .rating-container:hover #rating-icon{
+    animation: rating-icon 1.5s 1;
+ }
+ @keyframes rating-icon{
+     0%{
+         top: -150px;
+     }
+     30%{
+         top: 0px;
+     }
+     60%{
+         top: -30px;
+     }
+     100%{
+         top: 0;
+     }
+ }
+ /* ###### Client Css ##### */
+ .client-section{
+     width: 90%;
+     margin: 0 auto;
+     
+ }
+ /* ###### Contact Css ########## */
+.contact-section{
+    background-color: #F7F9FB;
+}
+.contact-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.form-title{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+}
+.form-section{
+    width: 80%;
+    margin: 0 auto;
+}
+.footer-input, .footer-textarea{
+    border: none;
+    width: 75%;
+    margin: 0 0 3% 0;
+    padding: 10px;
+    background-color: #F7F9FB;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.footer-input:focus{
+    outline: none;
+    background-color: none;
+    animation: form-input 3s infinite;  
+}
+.footer-textarea:focus{
+    outline: none;
+    background-color: none;
+    animation: form-input 3s infinite; 
+}
+@keyframes form-input {
+    0%{
+        border-bottom: 2px solid red;
+    }
+    40%{
+        border-bottom: 2px solid green;
+    }
+    70%{
+        border-bottom: 2px solid blue;
+    }
+    100%{
+        border-bottom: 2px solid red;
+    }
+}

@@ -1,0 +1,31 @@
+.logo-img{
+    text-align: center;
+}
+.device-main-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.device-button:hover{
+    background-color: rgb(19, 19, 255);
+}
+.device-selector{
+    padding: 1px 2px;
+    border-radius: 0;
+    width: 53.5%;
+    border: 1px solid black;
+}
+.device-input{
+    border: 1px solid black;
+}
+.device-container{
+    padding: 20px;
+}
+.device-title{
+    font-weight: bold;
+}
+.device-background{
+    border-left: 2px solid black;
+}
+.device-navbar{
+    padding: 0;
+}

@@ -1,0 +1,20 @@
+/* .dashboard-background{
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.652), rgba(0, 0, 0, 0.796)), url(../../../Resorces/80246925_1000.jpg);
+    height: 120vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+/* .dashboard-navbar{
+    padding-right: 0;
+    height: 120vh;
+    background-color: #010221;
+} */
+.dashboard-background{
+    border-left: 2px solid black;
+}
+.dashboard-navbar{
+    padding: 0;
+}

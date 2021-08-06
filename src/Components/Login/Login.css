@@ -1,0 +1,57 @@
+.background{
+    background-image: url(../../Resorces/imagen_portada_rlab_v1.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.loginBox{
+    width: 35%;
+    height: 100%;
+    padding: 3%;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.796);
+    
+    border-radius: 5px;
+}
+.loginText{
+    margin-bottom: 13%;
+}
+.input-box{
+    width: 100%;
+}
+.remember .rememberCheckbox{
+    margin-right: 2%;
+}
+.forgotPass .forgotTxt{
+    margin: 3% 0;
+    display: block;
+    text-decoration: none;
+}
+.forgotPass .forgotTxt:hover{
+    text-decoration: underline;
+}
+.creatTxt{
+    text-align: center;
+    margin-top: 1%;
+}
+.creatTxt .creatAccount{
+    text-decoration: none;
+    cursor: pointer;
+    color: #5B73F7;
+}
+.creatTxt .creatAccount:hover{
+    text-decoration: underline;
+}
+.signup{
+    height: 100%;
+}
+.creat-form{
+    position: relative;
+}
+.singup-error{
+    position: fixed;
+    top: 31%;
+}

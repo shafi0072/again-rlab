@@ -1,0 +1,512 @@
+
+/* #### Max Width 1399px ----- View 1300px  ####### */
+
+@media(max-width:1399px){
+    .status-title{
+        display: block!important;
+        text-decoration: underline!important;
+    }
+    .command-title{
+        font-size: 36px;
+    }
+    .device-meter-scroll{
+        height: 130px!important;
+        overflow-x: scroll;
+    }
+    .slide-head{
+        font-size: 70px;
+    }
+}
+
+/* #### Max Width 1299px ----- View 1200px  ####### */
+
+@media(max-width:1299px){
+    .command-title{
+        font-size: 33.7px;
+    }
+}
+
+/* #### Max Width 1199px ----- View 1000px  ####### */
+
+@media(max-width:1199px){
+    .creatAccount{
+        display: block;
+    }
+    .loginBox{
+        width: 45%;
+    }
+    .name{
+        height: 5%;
+    }
+    .user-map{
+        margin-bottom: 3%!important;
+    }
+    .name p{
+        padding: .2% 0 3% 1%!important;
+        font-size: 18px;
+    }
+    .selectProparty{
+        height: 10%;
+        font-size: 15px;
+        padding: .4% 1% .5% .5%!important;
+    }
+    .btnArea{
+        height: 5%;
+        font-size: 18px!important;
+        padding: .5% 0;
+    }
+    .btnEdit{
+        height: 5%;
+        font-size: 18px!important;
+        padding: .7% 0;
+    }
+    .form-name-p{
+        height: 5%;
+        font-size: 18px!important;
+        padding: .9% 0;
+    }
+    .meter-col{
+        padding: 0;
+    }
+    .command-title{
+        font-size: 28.2px;
+    }
+    .card-container{
+        width: 9rem!important;
+        height: 100%;
+    }
+    .slide-head{
+        font-size: 60px;
+    }
+    .navbar-brand-img{
+        width: 20%;
+      }
+}
+
+/* #### Max Width 999px ----- View 850px  ####### */
+
+@media(max-width:999px){
+    .loginBox{
+        width: 55%;
+    }
+    .selectProparty{
+        font-size: 16px;
+    }
+    .card-container{
+        width: 7rem!important;
+        height: 100%;
+    }
+    .control-input-text{
+        font-size: 16px!important;
+        text-align: left;
+        margin-bottom: 1%;
+    }
+    .control-input-box{
+        text-align: left;
+        margin-bottom: 4%;
+    }
+    .meter-col{
+        font-size: 16px;
+        padding: 0;
+    }
+    .meter-data{
+        font-size: 16px;
+        padding: 0;
+    }
+    .selectProparty{
+        padding: .4% 1% .4% .5%!important;
+    }
+    .command-title{
+        font-size: 24px;
+    }
+    .card-text-h6{
+        font-size: 16px!important;
+    }
+    .card-body{
+        padding: 12px;
+    }
+    .card-text-p{
+        font-size: 15px;
+    }
+}
+/* #### Max Width 849px ----- View 700px  ####### */
+
+@media(max-width:849px){
+    .card-container{
+        width: 6.7rem!important;
+        height: 100%;
+    }
+    .meter-col{
+        font-size: 15px;
+    }
+    .meter-data{
+        font-size: 15px;
+        
+    }
+    .command-title{
+        font-size: 21.8px;
+    }
+    .card-body{
+        padding: 10px;
+    }
+    .chart-list{
+        width: 10%!important;
+    }
+    .navbar-brand-img{
+        width: 25%!important;
+      }
+}
+@media(max-width:767px){
+    .device-meter-container{
+        height: 520px;
+        overflow-x: scroll;
+    }
+    .device-meter-scroll{
+        height: 100%;
+        overflow-x: initial!important;
+    }
+    .card-main-container{
+        height: 29rem!important;
+        overflow-y: scroll;
+    }
+    .card-container{
+        width: 13rem!important;
+        height: 100%;
+        margin: 0 auto;
+        margin-right: 33%;
+    }
+    .card-text-h6{
+        font-size: 22px!important;
+    }
+    .control-input-text{
+        font-size: 16px!important;
+    }
+    .status-data-container{
+        text-align: center!important;
+    }
+    .status-mid-data{
+        margin: 2% 0;
+    }
+    .thead{
+        display: none;
+    }
+    .tbody, .meter-data{
+        display: block;
+        width: 100%;
+    }
+    .tbody{
+        margin-bottom: 3%;
+    }
+    .meter-data{
+        text-align: right;
+        padding-left: 50%;
+        padding-right: 5%;
+        position: relative;
+    }
+    .meter-data::before{
+        content: attr(data-content);
+        width: 50%;
+        position: absolute;
+        left: 0;
+        padding-left: 5%;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 1.5%;
+    }
+    .meter-data:last-child{
+        border-right: 0!important;
+    }
+    .command-title{
+        font-size: 26.5px;
+    }
+    .slide-head{
+        font-size: 50px;
+    }
+}
+/* #### Max Width 699px ----- View 600px  ####### */
+
+@media(max-width:699px){
+    .loginBox{
+        width: 70%;
+    }
+    .selectProparty{
+        width: 20%!important;
+    }
+    .card-container{
+        width: 12rem!important;
+        margin-right: 33%;
+    }
+    .button{
+        margin-right: ;
+    }
+    .command-container{
+        display: block;
+    }
+    .command-text{
+        display: block;
+        width: 100%!important;
+        margin-right: 20px!important;
+    }
+    .command-input{
+        display: block;
+        width: 100%!important;
+    }
+    .command-title{
+        font-size: 22.9px;
+    }
+}
+
+/* #### Max Width 599px ----- View 400px  ####### */
+
+@media(max-width:599px){
+    .background{
+        padding: 0!important;
+        background-image: none;
+    }
+    .loginBox{
+        width: 100%;
+        border: none;
+    }
+    .control-input-number{
+        width: 100%;
+    }
+    .meter-button{
+        display: block!important;
+    }
+    .button1{
+        display: block;
+        width: 100%;
+        margin-bottom: 4%;
+    }
+    .button2{
+        display: block;
+        width: 100%;
+        margin-bottom: 4%;
+    }
+    .btnEdit{
+        font-size: 16px!important;
+        padding: 1.2% 0;
+    }
+    .form-name-p{
+        font-size: 16px!important;
+    }
+    .name p{
+        padding: .2% 0 3.9% 1%!important;
+        font-size: 18px;
+    }
+    .selectProparty{
+        height: 10%;
+        font-size: 19px!important;
+        padding: .4% 1% .5% .5%!important;
+    }
+    .btnArea{
+        height: 5%;
+        font-size: 18px!important;
+        padding: .6% 0;
+    }
+    .location-button{
+        width: 100%!important;
+        margin: 0!important;
+    }
+    .location-button-div{
+        justify-content: start!important;
+        margin-bottom: 4%;
+    }
+    .command-title{
+        font-size: 19.8px;
+    }
+    .slide-head{
+        font-size: 45px;
+    }
+}
+@media(max-width:516px){
+    
+    .location-title-text{
+            margin-right: 10px!important;
+            padding-top: 1%;
+    }
+    .command-title{
+        font-size: 17.1px;
+    }
+    .container{
+        padding: 0!important;
+        margin-right: 7%!important;
+    }
+    .device-div-container{
+        display: block!important;
+    }
+    .device-title{
+        width: 100%;
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 1%;
+    }
+    .device-input{
+        display: block;
+        width: 100%!important;
+        margin-bottom: 4%;
+    }
+    .device-button-container{
+        display: flex;
+        justify-content: start;
+    }
+    .device-button{
+        margin-left: 0!important;
+        font-size: 14px;
+        padding: 3% 4%;
+    }
+    .device-container{
+        width: 90%!important;
+        margin: 0 auto;
+        font-size: 13.5px;
+    }
+    .chart-list{
+        font-size: 15px;
+    }
+}
+@media(max-width:442px){
+    .title-name{
+        display: block!important;
+    }
+    .location-title-text{
+        display: block;
+        text-align: left;
+        margin-bottom: 2%;
+    }
+    .location-title-input{
+        width: 70%;
+        display: block;
+        text-align: left;
+    }
+    .location-button-div{
+        justify-content: start!important;
+    }
+    .location-button{
+        margin: 0!important;
+    }
+    .command-title{
+        font-size: 15.5px;
+    }
+    .container{
+        margin-right: 8%!important;
+    }
+    .chart-list{
+        width: 12%!important;
+        font-size: 14px;
+    }
+}
+/* #### Max Width 399px ----- View 300px  ####### */
+
+@media(max-width:399px){
+    .background{
+        padding: 0!important;
+        background-image: none;
+    }
+    .loginBox{
+        width: 100%;
+        border: none;
+    }
+    
+    .card-container{
+        width: 8rem!important;
+        margin-right: 33%!important;
+    }
+    .card-text-h6{
+        font-size: 19px!important;
+    }
+    .card-text-p{
+        font-size: 17px!important;
+    }
+    .button1{
+        font-size: 15px;
+    }
+    .button2{
+        font-size: 15px;
+    }
+    .status-data-container{
+        font-size: 14px!important;
+    }
+    .status-mid-data{
+        font-size: 14px!important;
+    }
+    .meter-data::before{
+        font-size: 14px;
+    }
+    .meter-data{
+        font-size: 14px;
+    }
+    .container{
+        padding: 0;
+        margin-right: 9%!important;
+    }
+    .user-map{
+        height: 390px!important;
+    }
+    
+    .topic-container{
+        display: block!important;
+    }
+    .command-text{
+        display: block;
+        width: 100%!important;
+        text-align: left;
+        margin-bottom: 1%;
+    }
+    .command-input{
+        display: block;
+        width: 100%!important;
+        margin-bottom: 6%;
+    }
+    .command-button{
+        width: 100%;
+    }
+    .command-title{
+        font-size: 15.5px;
+    }
+    .card-main-container{
+        height: 27rem!important;
+        overflow-y: scroll;
+    }
+    .btnArea{
+        width: 25%!important;
+        font-size: 15px!important;
+    }
+    .btnEdit{
+        font-size: 15px!important;
+        width: 20%!important;
+        padding: 1% 0;
+    }
+    .form-name-p{
+        font-size: 15px!important;
+    }
+    .device-button{
+        width: 100%;
+    }
+    .chart-list{
+        width: 17%!important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

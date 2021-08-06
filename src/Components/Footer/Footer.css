@@ -1,0 +1,119 @@
+.footer-section{
+    color: white;
+    background-color: rgb(48, 48, 48);
+}
+.footer-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ##### Footer Detail ##### */
+
+.f-button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: none;
+}
+.f-button::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    transition: all .3s ease-in-out;
+    border-radius: 4px 0 0 4px;
+}
+.f-button::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    transition: all .3s ease-in-out;
+    
+    border-radius: 0 4px 4px 0;
+}
+.f-button:hover.f-button::before{
+    left: 0;
+}
+/* @keyframes button-before {
+    0%{
+        left: -49%;
+        top: -100%;
+    }
+    100%{
+        left: -49%;
+        top: 0;
+    }
+} */
+.f-button:hover.f-button::after{
+    right: 0%;
+}
+
+/* ##### Footer List ##### */
+
+.footer-list-container{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.footer-list-title{
+    height: 20%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: .3% 0;
+    position: relative;
+}
+.footer-list-title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:2px;
+    background-color: rgb(156, 0, 156);
+    transition: all .3s;
+}
+.footer-list-container:hover .footer-list-title::before{
+    width: 22%;
+    animation: border 2s infinite;
+}
+@keyframes border {
+    0%{
+        left: -10%;
+    }
+    50%{
+        left: 92%;
+    }
+    100%{
+        left: -12%;
+    }
+}
+.footer-lists{
+    list-style: none;
+    font-size: 16px;
+    padding: 0;
+}
+.footer-list{
+    margin: 2% 0;
+}
+.footer-lists label{
+    transition: all .2s ;
+}
+.footer-lists label:hover{
+    letter-spacing: 1.5px;
+}
+/* ## copyright Footer Css ###### */
+.copyright-footer{
+    background-color: rgb(24, 24, 24);
+}

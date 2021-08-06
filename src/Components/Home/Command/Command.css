@@ -1,0 +1,29 @@
+.logo-img{
+    text-align: center;
+}
+.command-main-container{
+    width: 69%;
+    margin: 0 auto;
+}
+.command-title{
+    margin: 5% 0;
+    text-align: center;
+}
+.topic-container{
+    margin-bottom: 1.5%;
+    color: white;
+}
+.command-text{
+    width: 15%;
+    margin-right: 30px;
+    font-weight: bold;
+}
+.command-input{
+    width: 25%;
+}
+.command-background{
+    border-left: 2px solid black;
+}
+.command-navbar{
+    padding: 0;
+}

@@ -1,0 +1,114 @@
+
+/* #### Max Width 1399px ----- View 1300px  ####### */
+
+@media(max-width:1399px){
+    
+}
+
+/* #### Max Width 1299px ----- View 1200px  ####### */
+
+@media(max-width:1299px){
+.footer-input{
+    width: 25%!important;
+}
+}
+
+/* #### Max Width 1199px ----- View 1000px  ####### */
+
+@media(max-width:1199px){
+    .footer-input{
+        width: 33%!important;
+    }
+    .footer-textarea{
+        width: 35%!important;
+    }
+}
+
+/* #### Max Width 999px ----- View 850px  ####### */
+
+@media(max-width:999px){
+    .footer-input{
+        width: 40%!important;
+    }
+    .footer-textarea{
+        width: 42%!important;
+    }
+}
+
+/* #### Max Width 849px ----- View 700px  ####### */
+
+@media(max-width:849px){
+
+}
+
+@media(max-width:767px){
+    .footer-input{
+        width: 47%!important;
+    }
+    .footer-textarea{
+        width: 50%!important;
+    }
+}
+/* #### Max Width 699px ----- View 600px  ####### */
+
+@media(max-width:699px){
+    .footer-input{
+        width: 57%!important;
+    }
+    .footer-textarea{
+        width: 60%!important;
+    }
+}
+
+/* #### Max Width 599px ----- View 400px  ####### */
+
+@media(max-width:599px){
+    .footer-textarea{
+        width: 83%!important;
+    }
+    .footer-input{
+        width: 67%!important;
+    }
+}
+
+
+/* #### Max Width 399px ----- View 300px  ####### */
+
+@media(max-width:399px){
+    .footer-textarea{
+        width: 100%!important;
+    }
+    .footer-input{
+        width: 100%!important;
+    }
+    .footer-button{
+        width: 100%!important;
+    }
+}
+
+@media(max-width:280px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
