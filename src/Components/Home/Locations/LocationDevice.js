@@ -10,7 +10,7 @@ import db from '../../FirebaseConfig/Firebase';
 
 const LocationDevice = () => {
     const {Lid} = useParams();
-    console.log({Lid});
+  
     const [DBLocationDV, setDBLocationDV] = useState({})
     useEffect(() => {
         var docRef = db.collection("location").doc(Lid);
@@ -20,13 +20,13 @@ const LocationDevice = () => {
                 setDBLocationDV({...doc.data(), key:doc.id});
             } else {
                 // doc.data() will be undefined in this case
-                console.log("No such document!");
+               
             }
         }).catch((error) => {
-            console.log("Error getting document:", error);
+            
         });
     }, [Lid])
-    console.log({DBLocationDV});
+  
     return (
         <div className='row'>
             <div className="col-md-1">

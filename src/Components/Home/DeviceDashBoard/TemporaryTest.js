@@ -25,7 +25,7 @@ const TemporaryTest = () => {
               getDataFirebase.push({...doc.data(), key:doc.id});
               
             });
-            console.log({getDataFirebase});
+          
             
             // if(getDataFirebase.length > 0){
             //     const functionalArray = arrayFunc(getDataFirebase, id)

@@ -27,7 +27,7 @@ const Devices = () => {
             ...devicesData
         };
         newDevices[event.target.name] = event.target.value;
-        console.log(newDevices);
+       
         setDevicesData(newDevices);
 
     };
@@ -110,7 +110,7 @@ const Devices = () => {
                 <button className="btn btn-primary">Add/Save</button>
             </Form>}
             {
-                devices.map(data => {return <DeviceList data={data}/>})
+                devices.map(data => {return <DeviceList key={data.key} data={data}/>})
             }
         </div>
 

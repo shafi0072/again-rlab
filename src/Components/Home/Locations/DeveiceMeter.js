@@ -186,8 +186,8 @@ const DeveiceMeter = (props) => {
             <h1 className="meter-text">Meter</h1>
 
             <div className="device-meter-container">
-                {voltage01 >= 0 && <div>
-                    <div className="row thead">
+                {voltage01 >= 0 && <div className="tableArea">
+                    <div className="row thead tableHead">
                         <div className="col-md-4 meter-col">
                             <p>Date</p>
                         </div>
@@ -221,7 +221,7 @@ const DeveiceMeter = (props) => {
                         <div className="col-md-1 meter-data" data-content="Vcc 3" onClick={handleVolage03}>
                             {voltage01 && <p>{voltage03}V</p>}
                         </div>
-                        <div className="col-md-1 meter-data" data-content="Vcc 3" onClick={handleVlotage04}>
+                      <div className="col-md-1 meter-data" data-content="Vcc 3" onClick={handleVlotage04}>
                            {voltage01 &&  <p>{voltage04}V</p>}
                         </div>
 

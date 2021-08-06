@@ -24,7 +24,7 @@ const User = (props) => {
           {click.clickToUser && <div>
               <div className="user-map">
                     {
-                        data.map((data) =>  <UserData  data={data}/>)
+                        data.map((data) =>  <UserData key={data.key}  data={data}/>)
                     }
                     <div className="button d-flex justify-content-end">
                 <button className="btn btn-dark" onClick={handleClick}>Add User</button>
