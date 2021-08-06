@@ -53,29 +53,29 @@ useEffect(() => {
                 </div>
                <div className="container device-form-container mt-5">
                 
-               <div data-aos="fade-left"  className="clients d-flex justify-content-evenly mb-5">
+              {Device_id_1 && <div data-aos="fade-left"  className="clients d-flex justify-content-evenly mb-5">
                     <div className="form-name">{!Device_id_1 && <span><MeaSpinner/></span>}<p className="">{Device_id_1}</p></div>
                     <div title="Edit" className="meta_icon">
                     <EditIcon />
                     </div>
                     <Link title="select" to={`/locationsDevice/${Device_id_1}`}  className="meta_icon2"><ArrowForwardIcon/></Link>
-                </div>
-                <div data-aos="fade-right"  className="clients d-flex justify-content-evenly mb-5">
+                </div>}
+                {Device_id_2 && <div data-aos="fade-right"  className="clients d-flex justify-content-evenly mb-5">
                     <div className="form-name">{!Device_id_1 && <span><MeaSpinner/></span>}<p className="form-name-p">{Device_id_2}</p></div>
                      
                     <div title="Edit" className="meta_icon">
                     <EditIcon />
                     </div>
                     <Link title="select" to={`/locationsDevice/${Device_id_2}`}   className="meta_icon2"><ArrowForwardIcon/></Link>
-                </div>
-                <div data-aos="fade-left"  className="clients d-flex justify-content-evenly mb-5">
+                </div>}
+                {Device_id_3 && <div data-aos="fade-left"  className="clients d-flex justify-content-evenly mb-5">
                     <div className="form-name">{!Device_id_1 && <span><MeaSpinner/></span>}<p className="form-name-p">{Device_id_3}</p></div>
                      
                     <div title="Edit" className="meta_icon">
                     <EditIcon />
                     </div>
                     <Link title="select" to={`/locationsDevice/${Device_id_3}`}  className="meta_icon2"><ArrowForwardIcon/></Link>
-                </div>
+                </div>}
                 <div data-aos="fade-right" className="d-flex justify-content-end buttonArea">
                     <button className="btn btn-dark AddBUtton">Edit Location</button>
                 </div>

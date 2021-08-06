@@ -60,58 +60,58 @@ const Navbar = () => {
 
     return (
         <div>
-            <div class="sidebar">
-                <div class="logo-details">
+            <div className="sidebar">
+                <div className="logo-details">
 
-                    <div class="logo_name">RLAB</div>
-                    <i class='bx bx-menu' id="btn" onClick={btnCLick}></i>
+                    <div className="logo_name">RLAB</div>
+                    <i className='bx bx-menu' id="btn" onClick={btnCLick}></i>
                 </div>
-                <ul class="nav-list">
+                <ul className="nav-list">
                     <li>
-                        <i class='bx bx-search' onClick={serch}></i>
+                        <i className='bx bx-search' onClick={serch}></i>
                         <input type="text" placeholder="Search..."/>
-                        <span class="tooltip">Search</span>
+                        <span className="tooltip">Search</span>
                     </li>
                     <li>
                         <Link to="/userHome">
-                            <i class='bx bx-grid-alt'></i>
-                            <span class="links_name">User</span>
+                            <i className='bx bx-grid-alt'></i>
+                            <span className="links_name">User</span>
                         </Link>
-                        <span class="tooltip">User</span>
+                        <span className="tooltip">User</span>
                     </li>
                     <li>
                         <Link to="/location">
-                            <i class='bx bx-current-location'></i>
-                            <span class="links_name">Location</span>
+                            <i className='bx bx-current-location'></i>
+                            <span className="links_name">Location</span>
                         </Link>
-                        <span class="tooltip">Location</span>
+                        <span className="tooltip">Location</span>
                     </li>
                     <li>
                         <Link to="/devices">
-                            <i class='bx bxs-devices'></i>
-                            <span class="links_name">Device</span>
+                            <i className='bx bxs-devices'></i>
+                            <span className="links_name">Device</span>
                         </Link>
-                        <span class="tooltip">Device</span>
+                        <span className="tooltip">Device</span>
                     </li>
                     <li>
                         <Link to="/command">
-                            <i class='bx bx-message-dots'></i>
-                            <span class="links_name">Command</span>
+                            <i className='bx bx-message-dots'></i>
+                            <span className="links_name">Command</span>
                         </Link>
-                        <span class="tooltip">Command</span>
+                        <span className="tooltip">Command</span>
                     </li>
-                    <li class="profile">
-                        <div class="profile-details">
-                            <div class="name_job">
-                                <div class="name">{user.email}</div>
-                                <div class="job">{user.Role}</div>
+                    <li className="profile">
+                        <div className="profile-details">
+                            <div className="name_job">
+                                <div className="name">{user.email}</div>
+                                <div className="job">{user.Role}</div>
                             </div>
                         </div>
-                        <i class='bx bx-log-out' id="log_out" onClick={handleLogout}></i>
+                        <i className='bx bx-log-out' id="log_out" onClick={handleLogout}></i>
                     </li>
                 </ul>
             </div>
-            <section class="home-section"></section>
+            <section className="home-section"></section>
         </div>
     );
 };

@@ -108,11 +108,12 @@ const DeveiceMeter = (props) => {
     var seconds = "0" + date.getSeconds();
     var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
     const fullTIme = `${fullDate}/${month}/${year}`
-    console.log({fullDate});
+    
 
     
         const options = {
             animationEnabled: true,	
+            theme: "light2",
             title:{
                 text: "VCC"
             },
@@ -123,7 +124,7 @@ const DeveiceMeter = (props) => {
                 shared: true
             },
             data: [{
-                type: "stackedArea",
+                type: "line",
                 name: "Vcc1",
                 showInLegend: true,
                 dataPoints: [
@@ -137,7 +138,7 @@ const DeveiceMeter = (props) => {
                 ]
             },
             {
-                type: "stackedArea",
+                type: "line",
                 name: "Vcc2",
                 showInLegend: true,
                 dataPoints: [
@@ -150,7 +151,7 @@ const DeveiceMeter = (props) => {
                 ]
             },
             {
-                type: "stackedArea",
+                type: "line",
                 name: "Vcc3",
                 showInLegend: true,
                 dataPoints: [
@@ -163,7 +164,7 @@ const DeveiceMeter = (props) => {
                 ]
             },
             {
-                type: "stackedArea",
+                type: "line",
                 name: "Vcc4",
                 showInLegend: true,
                 dataPoints: [

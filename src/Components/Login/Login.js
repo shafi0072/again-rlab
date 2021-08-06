@@ -188,24 +188,24 @@ useEffect(() => {
                 {user.success && <p className='text-success'>Log in successfull</p>}
                 <form action="" onSubmit={handleSubmitLogin}>
                 <div className="">
-                    <div class="mb-3 row">
+                    <div className="mb-3 row">
 
-                        <div class="col-sm-10 input-box">
+                        <div className="col-sm-10 input-box">
                             <input
                                 onChange={handleOnChange}
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="staticEmail"
                                 name="email"
                                 placeholder="User email"/>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-10 input-box">
+                    <div className="mb-3 row">
+                        <div className="col-sm-10 input-box">
                             <input
                                 type="password"
                                 onChange={handleOnChange}
-                                class="form-control"
+                                className="form-control"
                                 id="inputPassword"
                                 name="ConfirmPassword"
                                 placeholder="Password"/>
@@ -250,59 +250,59 @@ useEffect(() => {
                 {user.success && <p className='text-success'>SignUp SuccessFull</p>}
                 <form className="mt-4 creat-form" action="" onSubmit={handleCreateAccount}>
                 <div className="">
-                    <div class="mb-3 row">
+                    <div className="mb-3 row">
 
-                        <div class="col-sm-10 input-box">
+                        <div className="col-sm-10 input-box">
                             <input
                                 onChange={handleOnChange}
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="staticEmail"
                                 placeholder="First Name"
                                 name="name"/>
                         </div>
                     </div>
-                    <div class="mb-3 row">
+                    <div className="mb-3 row">
 
-                        <div class="col-sm-10 input-box">
+                        <div className="col-sm-10 input-box">
                             <input
                             onChange={handleOnChange}
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="staticEmail"
                                 placeholder="Last Name"
                                 name="name"/>
                         </div>
                     </div>
-                    <div class="mb-3 row">
+                    <div className="mb-3 row">
 
-                        <div class="col-sm-10 input-box">
+                        <div className="col-sm-10 input-box">
                             <input
                             onChange={handleOnChange}
                                 type="email"
-                                class="form-control"
+                                className="form-control"
                                 id="staticEmail"
                                 placeholder="Email"
                                 name="email"/>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-10 input-box">
+                    <div className="mb-3 row">
+                        <div className="col-sm-10 input-box">
                             <input
                             onChange={handleOnChange}
                                 type="password"
-                                class="form-control"
+                                className="form-control"
                                 id="inputPassword"
                                 name="ConfirmPassword"
                                 placeholder="Password"/>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-10 input-box">
+                    <div className="mb-3 row">
+                        <div className="col-sm-10 input-box">
                             <input
                             onChange={handleOnChange}
                                 type="password"
-                                class="form-control"
+                                className="form-control"
                                 id="inputPassword"
                                 name="ConfirmPassword"
                                 placeholder="Confirm Password"/>

@@ -33,13 +33,13 @@ const RestPassword = () => {
            <div className="col-md-5 mt-5">
            <form action="" onSubmit={handleSubmit}>
                 <div className="">
-                    <div class="mb-3 row">
+                    <div className="mb-3 row">
 
-                        <div class="col-sm-10 input-box">
+                        <div className="col-sm-10 input-box">
                             <input
                                 onChange={handleOnChange}
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="staticEmail"
                                 name="email"
                                 placeholder="email"/>

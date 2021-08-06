@@ -29,41 +29,41 @@ const Navbar = () => {
    }
     return (
         <div >
-            <nav class={`navbar navbar-expand-lg navbar-dark bg-dark`}>
-                <div class="container-fluid">
-                    <Link class="navbar-brand" to="#"><img className="navbar-brand-img" style={{}} src={logo} alt=""/></Link>
+            <nav className={`navbar navbar-expand-lg navbar-dark bg-dark`}>
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="#"><img className="navbar-brand-img" style={{}} src={logo} alt=""/></Link>
                     <button
-                        class="navbar-toggler"
+                        className="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarNav"
                         aria-controls="navbarNav"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div className="collapse navbar-collapse" id="navbarNav">
                     
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to="#">Home</Link>
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="#">Products</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="#">Products</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="#">About us</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="#">About us</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="#">contract us</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="#">contract us</Link>
                             </li>
-                            {user.isSignedIn &&<li class="nav-item">
-                                <Link class="nav-link" to="/userHome">Dashboard</Link>
+                            {user.isSignedIn &&<li className="nav-item">
+                                <Link className="nav-link" to="/userHome">Dashboard</Link>
                             </li>}
-                            {!user.isSignedIn && <li class="nav-item">
+                            {!user.isSignedIn && <li className="nav-item">
                                 <Link to='/auth'><button className="btn btn-primary" onClick={handleSignOutActice}>Log in</button></Link>
                             </li>}
-                            {user.isSignedIn && <li class="nav-item">
+                            {user.isSignedIn && <li className="nav-item">
                                 <button className="btn btn-primary" onClick={handleLogout}>Log out</button>
                             </li>}
                         </ul>
