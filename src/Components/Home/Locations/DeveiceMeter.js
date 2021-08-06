@@ -251,11 +251,11 @@ const DeveiceMeter = (props) => {
                 {voltage01 && <CanvasJSChart options = {options}/>}
                 <div className="chart-btn">
                     <ul className="d-flex justify-content-end chart-lists">
-                        <li className="bg-primary chart-list text-light" onClick={handleWeek}>1W</li>
-                        <li className="bg-primary chart-list text-light" onClick={handleDay}>1D</li>
-                        <li className="bg-primary chart-list text-light" onClick={handleHalfDay}>12H</li>
-                        <li className="bg-primary chart-list text-light" onClick={handleSixH}>6h</li>
-                        <li className="bg-primary chart-list text-light" onClick={handleOneH}>1h</li>
+                        <li className="bg-success chart-list text-light graphColor" onClick={handleWeek}>1W</li>
+                        <li className="bg-success chart-list text-light graphColor" onClick={handleDay}>1D</li>
+                        <li className="bg-success chart-list text-light graphColor" onClick={handleHalfDay}>12H</li>
+                        <li className="bg-success chart-list text-light graphColor" onClick={handleSixH}>6h</li>
+                        <li className="bg-success chart-list text-light graphColor" onClick={handleOneH}>1h</li>
                     </ul>
                 </div>
                 
@@ -279,8 +279,8 @@ const DeveiceMeter = (props) => {
                                 <div className="col-xl-4 col-lg-4"></div>
                             </div>
                             <div className="meter-button d-flex justify-content-end">
-                                <div className="btn btn-primary button1"><span>INT CYCLE</span></div>
-                                <div className="btn btn-primary button2"><span>ON / OFF</span></div>
+                                <div className="btn btn-primary button1 graphColor"><span>INT CYCLE</span></div>
+                                <div className="btn btn-primary button2 graphColor"><span>ON / OFF</span></div>
                             </div>
 
                                 
