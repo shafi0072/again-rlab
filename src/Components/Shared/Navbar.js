@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+
 import {Link} from 'react-router-dom'
 import {useContext} from 'react';
 import {userContext} from './../../App';

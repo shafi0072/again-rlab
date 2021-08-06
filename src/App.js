@@ -10,7 +10,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import DeviceDashBoard from './Components/Home/DeviceDashBoard/DeviceDashBoard';
 import RestPassword from './Components/Login/RestPassword';
 import Home from './Components/Home/HomeMain/Home'
-import TemporaryTest from './Components/Home/DeviceDashBoard/TemporaryTest';
+
 import MainDevices from './Components/Home/Devices/MainDevices';
 import MainLocation from './Components/Home/Locations/MainLocation';
 import MainCommand from './Components/Home/Command/MainCommand';

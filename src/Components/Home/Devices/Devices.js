@@ -5,7 +5,7 @@ import '../../../responsive.css';
 
 import db from '../../FirebaseConfig/Firebase'
 
-import {Button, Form, Segment} from 'semantic-ui-react'
+import { Form} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import { useEffect } from 'react';
 import DeviceList from './DeviceList';
@@ -31,7 +31,7 @@ const Devices = () => {
         setDevicesData(newDevices);
 
     };
-    const [user, setUser] = useContext(userContext)
+    const [user] = useContext(userContext)
     const handleSubmit = (e) => {
         db
             .collection("Devices")

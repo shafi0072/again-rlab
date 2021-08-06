@@ -3,7 +3,7 @@ import { Redirect, Route } from 'react-router-dom';
 import { userContext } from '../../App';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [user, setUser] = useContext(userContext);
+    const [user] = useContext(userContext);
     return (
         <div>
             <Route

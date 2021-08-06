@@ -1,38 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Location.css';
 import logo from '../../../Resorces/logo_RLAB.png';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EditIcon from '@material-ui/icons/Edit';
-import db from '../../FirebaseConfig/Firebase'
+
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import MeaSpinner from './MetarialSpinner'
 
 const DevicesForm = (props) => {
 
- const {Device_id_1, Device_id_2, Device_id_3} = props.data;  //deviceid coming from location database
+ const {Device_id_1, Device_id_2, Device_id_3} = props.data;  
 
- const [device1, setDevice1] = useState([]); //device id 1 from database
- const [device2, setDevice2] = useState([]); // device id 2 from database
- const [device3, setDevice3] = useState([]); // device id 3 from database
- 
-//  function for liner search start
-    
-    function maxNumber(arr) {
-        let i;
 
-        let max = arr[0].dateSocket;
-
-        for (i = 1; i < arr.length; i++){
-            max = arr[i].dateSocket;
-        }
-        return max
-    }
-    
-// finish |^ linear search 
-    
     
 
    
@@ -42,8 +24,7 @@ const DevicesForm = (props) => {
 useEffect(() => {
     Aos.init({duration: 2000});
 }, []);
-// const result = maxNumber(device1)// testing dateSocket 
-//     console.log({result})
+
     
     return (
             

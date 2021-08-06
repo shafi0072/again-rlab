@@ -1,19 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Footer.css'
 
 const Footer = () => {
-    const [input, setInput] = useState({
-        firstName:'',
-        lastName:'',
-        email:'',
-        message:''
-    });
-    const handleChange = (e) => {
-        const newForm = {...input};
-        newForm[e.target.name] = e.target.value;
-        
-        setInput(newForm)
-    }
+    
     
     return (
         <div>

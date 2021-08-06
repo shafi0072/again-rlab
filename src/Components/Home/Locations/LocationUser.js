@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import DevicesForm from './DevicesForm';
-import logo1 from '../../../Resorces/logo1.png';
-import logo2 from '../../../Resorces/logo2.png';
-import logo3 from '../../../Resorces/logo3.png';
+import React from 'react';
+
+
 import './LocationStyle.css';
 import '../../../responsive.css';
 import {Link} from 'react-router-dom'

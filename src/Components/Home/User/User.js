@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './user.css';
 import '../../../responsive.css';
 import UserForm from './UserForm';
-import {userContext} from '../../../App';
+
 import UserData from './UserData';
 
 const User = (props) => {
@@ -17,7 +17,7 @@ const User = (props) => {
         newClick.clickToUser = false;
         setClick(newClick)
     }
-    const [user, setUser]  = useContext(userContext);
+    
     const data = props.data;
     return (
         <div className='mt-5 text-center'>

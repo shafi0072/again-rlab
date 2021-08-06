@@ -28,7 +28,7 @@ const Login = () => {
         signUp: false
     });
     const [userData, setUserData] = useState([]);
-    const [loading, setLoading] = useState(true)
+    
     const handleSignUp = () => {
         const newClick = {...click}
         newClick.login = false;
@@ -157,7 +157,7 @@ useEffect(() => {
             const functionalArray = arrayFunc(getDataFirebase, user.email)
             setUserData(functionalArray);
           
-            setLoading(false)
+            
            
         }
     });

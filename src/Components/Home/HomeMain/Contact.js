@@ -29,7 +29,7 @@ const Contact = () => {
         if(input.firstName > 0){
             setLength(true)
         }
-    },[])
+    },[input.firstName])
     
     return (
         <div>
