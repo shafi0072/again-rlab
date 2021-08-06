@@ -232,17 +232,17 @@ const DeveiceMeter = (props) => {
                 </div>}
                 <div>
                     <div className="row my-2 status-container">
-                        {vBat >= 0 &&<div className="col-xl-3 col-md-2 text-start p-0 status-data-container">
+                        {vBat >= 0 && <div className="col-xl-3 col-md-2 text-start p-0 status-data-container statusBar">
                             <span className="status-title">Status:</span>
                             <span>Ok</span>
                         </div>}
-                        {fullTIme !== "NaN/NaN/NaN" && <div className="col-xl-6 col-md-8 p-0 status-mid-data">
+                        {fullTIme !== "NaN/NaN/NaN" && <div className="col-xl-6 col-md-8 p-0 status-mid-data statusBar2">
                             <span className="status-title">Last connection:</span>
                             <span className="status-data-date">{formattedTime}</span>
                             <span>{fullTIme}</span>
                         </div>}
                         {fullTIme === "NaN/NaN/NaN" && <Spinner/>}
-                       {vBat >= 0 && <div className="col-xl-3 col-md-2 text-end p-0 status-data-container">
+                       {vBat >= 0 && <div className="col-xl-3 col-md-2 text-end p-0 status-data-container statusBar">
                             <span className="status-title">Vbat:</span>
                             <span>{vBat}V</span>
                         </div>}

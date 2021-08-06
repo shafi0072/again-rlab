@@ -123,3 +123,36 @@
 .tableArea{
     width: 110%!important;
 }
+.statusBar{
+    border-radius: 35px;
+    text-align: center;
+    width: 10%;
+    background-color: skyblue;
+    color: white;
+    padding-left: 20px!important;
+    padding-top: 5.7px!important;
+    padding-bottom: 5.7px!important;
+    height: 100%;
+}
+.statusBar2{
+    border-radius: 35px;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(85, 195, 156)!important;
+    color: white;
+    padding-left: 20px!important;
+    padding-top: 5.7px!important;
+    padding-bottom: 5.7px!important;
+    height: 100%;
+}
+.statusBar:last-child{
+    border-radius: 35px;
+    text-align: center;
+    width: 10%;
+    background-color: skyblue;
+    color: white;
+    padding-right: 20px!important;
+    padding-top: 5.7px!important;
+    padding-bottom: 5.7px!important;
+    height: 100%;
+}
