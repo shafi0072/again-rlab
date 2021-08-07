@@ -85,7 +85,7 @@
 .device-meter-list-container{
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 .device-meter-list{
     width: 55%;
@@ -94,6 +94,8 @@
 .device-list{
     display: block;
     margin-bottom: .5%;
+    margin-left: 30px;
+    font-size: 28px!important;
 }
 .device-meter-scroll{
     height: 145px!important;
@@ -122,4 +124,57 @@
 }
 .tableArea{
     width: 110%!important;
+}
+.statusBar{
+    border-radius: 35px;
+    text-align: center;
+    width: 10%;
+    background-color: skyblue;
+    color: white;
+    padding-left: 20px!important;
+    padding-top: 5.7px!important;
+    padding-bottom: 5.7px!important;
+    height: 100%;
+}
+.statusBar2{
+    border-radius: 35px;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(85, 195, 156)!important;
+    color: white;
+    padding-left: 20px!important;
+    padding-top: 5.7px!important;
+    padding-bottom: 5.7px!important;
+    height: 100%;
+}
+.statusBar:last-child{
+    border-radius: 35px;
+    text-align: center;
+    width: 10%;
+    background-color: skyblue;
+    color: white;
+    padding-right: 20px!important;
+    padding-top: 5.7px!important;
+    padding-bottom: 5.7px!important;
+    height: 100%;
+}
+.DefaultData1{
+    width: 40%;
+    height: 180px;
+    
+    background-image: linear-gradient(to right,#61bf9d,#2fb181);
+    border-radius: 50px;
+    box-shadow: 30px 30px 40px lightgray;
+}
+.DefaultData2{
+    width: 40%;
+    height: 180px;
+    overflow: scroll;
+    background-image: linear-gradient(to right,#d97b79,#e06664);
+    border-radius: 50px;
+    padding-left: 2%;
+    box-shadow: 30px 30px 40px lightgray;
+}
+.DefaultData2::-webkit-scrollbar{
+    display: none;
 }
