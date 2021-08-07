@@ -8,86 +8,225 @@
 /* #### Max Width 1299px ----- View 1200px  ####### */
 
 @media(max-width:1299px){
-.footer-input{
-    width: 25%!important;
-}
+    .homePage-title{
+        font-size: 48px;
+    }
+    .homePage-p{
+        font-size: 19px;
+    }
 }
 
 /* #### Max Width 1199px ----- View 1000px  ####### */
 
 @media(max-width:1199px){
-    .footer-input{
-        width: 33%!important;
+    .homePage-title{
+        font-size: 45px;
     }
-    .footer-textarea{
-        width: 35%!important;
+    .homePage-p{
+        font-size: 18px;
     }
+    .icon{
+        width: 20%;
+    }
+    #service-icon{
+        font-size: 35px;
+    }
+    .detail-head{
+        font-size: 23px;
+   }
 }
 
 /* #### Max Width 999px ----- View 850px  ####### */
 
 @media(max-width:999px){
-    .footer-input{
-        width: 40%!important;
+    .homePage-title{
+        font-size: 42px;
     }
-    .footer-textarea{
-        width: 42%!important;
+    .icon{
+        width: 20%;
+    }
+    #service-icon{
+        font-size: 30px;
+    }
+    .detail-head{
+        font-size: 21px;
+   }
+   .rating-number{
+    font-size: 37px;
+    margin: 1% 0;
+    }
+    .rating-line{
+        font-size: 16px;
+    }
+    #rating-icon{
+        text-align: center;
+        font-size: 42px;
+        position: relative;
     }
 }
 
 /* #### Max Width 849px ----- View 700px  ####### */
 
 @media(max-width:849px){
-
+    .homePage-title{
+        font-size: 40px;
+    }
+    .homePage-p{
+        font-size: 17px;
+    }
+    .icon{
+        width: 20%;
+    }
+    #service-icon{
+        font-size: 27px;
+    }
+    .detail-head{
+        font-size: 20px;
+   }
 }
 
 @media(max-width:767px){
-    .footer-input{
-        width: 47%!important;
+    .homePage-title{
+        font-size: 37px;
     }
-    .footer-textarea{
-        width: 50%!important;
+    .homePage-p{
+        font-size: 16px;
+    }
+    .full-name{
+        font-size: 20px;
+    }
+    .detail-head{
+        font-size: 30px;
+   }
+   .detail{
+       margin-bottom: 5%;
+   }
+   .information-container{
+       padding: 0!important;
+    }
+    .service-details-container{
+        padding: 0!important;
+    }
+    .icon{
+        width: 12%;
+    }
+    #service-icon{
+        font-size: 37px;
+    }
+    .service-item{
+        margin-bottom: 3.5%;
+    }
+    .rating-container{
+        margin-bottom: 6%;
+    }
+    .rating-container:first-child{
+        margin-top: 2%;
+    }
+    .rating-container:last-child{
+        margin-bottom: 0;
+    }
+    .rating-number{
+        font-size: 37px;
+        margin: 1% 0;
+    }
+    .rating-line{
+        font-size: 16px;
+    }
+    #rating-icon{
+        text-align: center;
+        font-size: 42px;
+        position: relative;
     }
 }
 /* #### Max Width 699px ----- View 600px  ####### */
 
 @media(max-width:699px){
-    .footer-input{
-        width: 57%!important;
+    .homePage-title{
+        font-size: 42px;
     }
-    .footer-textarea{
-        width: 60%!important;
+    .homePage-p{
+        font-size: 18px;
+    }
+    .icon{
+        width: 12%;
+    }
+    #service-icon{
+        font-size: 37px;
     }
 }
 
 /* #### Max Width 599px ----- View 400px  ####### */
 
 @media(max-width:599px){
-    .footer-textarea{
-        width: 83%!important;
+    .homePage-title{
+        font-size: 29px;
     }
-    .footer-input{
-        width: 67%!important;
+    .full-name{
+        font-size: 18px;
     }
+    .icon{
+        width: 17%;
+    }
+    #service-icon{
+        font-size: 33px;
+    }
+    .homePage-title{
+        font-size: 38px;
+    }
+    .homePage-p{
+        font-size: 13px;
+    }
+    .detail-head{
+        font-size: 25px;
+   }
 }
 
 
 /* #### Max Width 399px ----- View 300px  ####### */
 
 @media(max-width:399px){
-    .footer-textarea{
-        width: 100%!important;
-    }
-    .footer-input{
-        width: 100%!important;
-    }
     .footer-button{
         width: 100%!important;
     }
+    .homePage-title{
+        font-size: 30px;
+    }
+    .homePage-p{
+        font-size: 14px;
+    }
+    .full-name{
+        font-size: 16px;
+    }
+    .detail-head{
+        font-size: 23px;
+   }
+   .icon{
+    width: 17%;
+    }   
+   #service-icon{
+    font-size: 30px;
+}
 }
 
 @media(max-width:280px){
-
+    .homePage-title{
+        font-size: 25px;
+    }
+    .full-name{
+        font-size: 16px;
+    }
+    .detail-head{
+        font-size: 20px;
+   }
+   .icon{
+    width: 17%;
+    }   
+   #service-icon{
+    font-size: 27px;
+    }
+    .detail-head{
+        font-size: 26px;
+   }
 }
 
 

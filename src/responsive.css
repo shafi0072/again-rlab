@@ -13,9 +13,6 @@
         height: 130px!important;
         overflow-x: scroll;
     }
-    .slide-head{
-        font-size: 70px;
-    }
 }
 
 /* #### Max Width 1299px ----- View 1200px  ####### */
@@ -76,7 +73,7 @@
         height: 100%;
     }
     .slide-head{
-        font-size: 60px;
+        font-size: 60px!important;
     }
     .navbar-brand-img{
         width: 20%;
@@ -221,7 +218,7 @@
         font-size: 26.5px;
     }
     .slide-head{
-        font-size: 50px;
+        font-size: 50px!important;
     }
 }
 /* #### Max Width 699px ----- View 600px  ####### */
@@ -317,7 +314,7 @@
         font-size: 19.8px;
     }
     .slide-head{
-        font-size: 45px;
+        font-size: 43px!important;
     }
 }
 @media(max-width:516px){
@@ -365,6 +362,9 @@
     .chart-list{
         font-size: 15px;
     }
+    .slide-head{
+        font-size: 40px!important;
+    }
 }
 @media(max-width:442px){
     .title-name{
@@ -395,6 +395,9 @@
     .chart-list{
         width: 12%!important;
         font-size: 14px;
+    }
+    .slide-head{
+        font-size: 37px!important;
     }
 }
 /* #### Max Width 399px ----- View 300px  ####### */
@@ -487,9 +490,16 @@
     .chart-list{
         width: 17%!important;
     }
+    .slide-head{
+        font-size: 35px!important;
+    }
 }
 
-
+@media(max-width:280px){
+    .slide-head{
+        font-size: 33px!important;
+    }
+}
 
 
 

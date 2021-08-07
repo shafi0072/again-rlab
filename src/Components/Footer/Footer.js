@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
 
 const Footer = () => {
     
@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="footer-section ">
                 <div className="footer-container pt-5 pb-4">
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-md-4 mb-5">
                             <div className="left-section">
                                 <h2 className="text-center">This is RLAB</h2>
                                 <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eum nobis neque ipsum, qui dolor.</p>
@@ -33,7 +33,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                                 <div className="col-md-2"></div>
-                                <div className="col-md-2 footer-list-container">
+                                <div className="col-md-2 footer-list-container footer-list-mid">
                                     <h5 className="footer-list-title color2">Discover</h5>
                                     <ul className="footer-lists">
                                         <li className="footer-list"><label htmlFor="">Discover1</label></li>

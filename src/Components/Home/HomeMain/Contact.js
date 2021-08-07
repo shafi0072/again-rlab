@@ -38,7 +38,7 @@ const Contact = () => {
                     <h1 className="text-center homePage-title">Contact Us</h1>
                     <p className="homePage-p text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
                     <div className="row">
-                        <div className="col-md-5 text-center">
+                        <div className="col-md-5 text-center mb-5">
                             <div>
                                 <h1 className="">RLAB</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolore dicta eligendi corporis repudiandae tenetur quia sapiente laudantium minima repellendus assumenda laboriosam porro veniam esse hic, illum possimus quas nobis?</p>
@@ -57,10 +57,14 @@ const Contact = () => {
                                     <h4 htmlFor="email" className="form-title">Email Adress</h4><br />
                                     <input className="footer-input" type="email" name="email" placeholder="Email Adress" id="email" style={{borderRadius:'5px', height:'40px', padding:'10px' }} onChange={handleChange}/><br />
                                     <h4 htmlFor="message" className="form-title">Message</h4><br />
-                                    <textarea className="footer-textarea mb-2" name="message" id="message" cols="45" rows="1" placeholder="Write Something" style={{resize:'vartical', width:'100%', borderRadius:"5px", padding:'10px'}} onChange={handleChange}></textarea>
+                                    <textarea className="footer-textarea mb-2" name="message" id="message" cols="45" rows="1" placeholder="Write Something" style={{resize:'vartical',borderRadius:"5px", padding:'10px'}} onChange={handleChange}></textarea>
                                     <br />
-                                    {length && <button className="btn btn-primary footer-button" type="submit">Submit</button>}
-                                    {!length && <button className="btn btn-dark footer-button">Submit</button>}
+                                    <div className="contact-btn text-center">
+                                        {length && <button className="btn footer-button" type="submit">Submit</button>}
+                                    </div>
+                                    <div className="contact-disable-btn text-center">
+                                        {!length && <p className="footer-disable-button">Fill The Form For Unlock The Button.</p>}
+                                    </div>
                                 </form>
                             </div>
                         </div>

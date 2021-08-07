@@ -28,7 +28,7 @@ const Information = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="details-container row py-2">
+                    {/* <div className="details-container row py-2">
                         <div className="col-md-4">
                             <div className="detail">
                                 <h1>Modern Design</h1>
@@ -47,7 +47,7 @@ const Information = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi assumenda quis laudantium amet velit saepe ad corporis animi. Eaque, tempora.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

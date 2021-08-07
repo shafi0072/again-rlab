@@ -117,3 +117,10 @@
 .copyright-footer{
     background-color: rgb(24, 24, 24);
 }
+
+/* Responsive footer */
+@media(max-width:767px){
+    .footer-list-mid{
+        padding: 5% 0;
+    }
+}
