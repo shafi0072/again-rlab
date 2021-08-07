@@ -6,6 +6,7 @@ const Service = () => {
     return (
         <div>
             <div className="service-section py-5">
+                <div className="service-container">
                 <h1 className="homePage-title text-center">Our Services</h1>
                 <p className="homePage-p text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div className="service-detail">
@@ -79,6 +80,7 @@ const Service = () => {
                             </div>
                         </div>
                     </div> */}
+                </div>
                 </div>
             </div>
         </div>

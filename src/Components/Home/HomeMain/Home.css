@@ -47,7 +47,7 @@
 }
  /* ####### Information Css ##### */
  .information-section{
-    background-color: #F7F9FB;
+    
  }
  .information-container{
      width: 90%;
@@ -55,6 +55,9 @@
  }
  /* #### Service Css ##### */
  .service-section{
+    background-color: #e7e7e7;
+ }
+ .service-container{
     width: 90%;
     margin: 0 auto;
  }
