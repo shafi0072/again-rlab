@@ -29,3 +29,40 @@
 .device-navbar{
     padding: 0;
 }
+.deviceMainForm{
+    width: 50%;
+}
+.mainFormWidth{
+    position: relative;
+    left: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12%;
+    
+}
+.btn-Custom{
+    background-color: #55c39c!important;
+    color: white;
+    width: 49.4%;
+    transition: all 0.7s ease-in-out;
+}
+.btn-Custom:hover{
+    background-color: #d97b79!important;
+    color: white;
+    width: 49.4%;
+}
+.formBG{
+    background-color:#55c39c!important;
+    color: white!important;
+    display: flex;
+    justify-content: center;
+}
+.meta-Icon2{
+    background-color: #d97b79!important;
+    color: white!important;
+}
+.meta-Icon2:hover{
+    background-color: #55c39c!important;
+    color: white!important;
+}

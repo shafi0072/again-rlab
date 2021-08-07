@@ -6,9 +6,9 @@ import Spinner from '../../Shared/Spinner/Spinner'
 import { useState } from 'react';
 import { useContext } from 'react';
 import { userContext } from '../../../App';
-
+import SettingsApplicationsOutlinedIcon from '@material-ui/icons/SettingsApplicationsOutlined';
 import {CanvasJSChart} from 'canvasjs-react-charts'
-
+import PowerIcon from '@material-ui/icons/Power';
 
 
 const DeveiceMeter = (props) => {
@@ -264,18 +264,18 @@ const DeveiceMeter = (props) => {
                         <div>
                             <p className="row title-control">Control</p>
                             
-                            <div className="row">
+                            <div className="row mb-3">
                                 <div className="col-xl-3 col-lg-3">
                                     <p className="control-input-text">Period :</p>
                                 </div>
-                                <div className="col-xl-5 col-lg-5 control-input-box"><input className="control-input-number" type="number" value={latitude} /></div>
+                                <div className="col-xl-5 col-lg-5 control-input-box"><input className="form-control" type="number" value={latitude} /></div>
                                 <div className="col-xl-4 col-lg-4"></div>
                             </div>
                             <div className="row">
                                 <div className="col-xl-3 col-lg-3">
                                     <p className="control-input-text">Freq :</p>
                                 </div>
-                                <div className="col-xl-5 col-lg-5 control-input-box"><input className="control-input-number" type="number" value={longitude} /></div>
+                                <div className="col-xl-5 col-lg-5 control-input-box"><input className="form-control" type="number" value={longitude} /></div>
                                 <div className="col-xl-4 col-lg-4"></div>
                             </div>
                             <div className="meter-button d-flex justify-content-end">
@@ -283,19 +283,25 @@ const DeveiceMeter = (props) => {
                                 <div className="btn btn-primary button2 graphColor"><span>ON / OFF</span></div>
                             </div>
 
+                               <div className='d-flex justify-content-between mb-5'>
+                               <div className="DefaultData1 d-flex justify-content-center pt-5">
+                                <h1 className="text-light"><PowerIcon style={{fontSize:'80px'}}/></h1>
+                                {txPower >= 0 && <h1 className="text-light">TXPower : {txPower}</h1> }
+                                </div>
+                                <div className="DefaultData2 d-flex justify-content-center pt-5">
+                                <h1 className="text-light"><SettingsApplicationsOutlinedIcon style={{fontSize:'80px'}}/></h1>
+                                <div className=" device-meter-list-container d-flex justify-content-between">
+                                    {rssiGateway >= 0 && <li className=" text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">rssiGateway :</h5> {rssiGateway}</li>}
+                                    {nMedicion >= 0 && <li className=" text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">nMedicion :</h5> {nMedicion}</li>}
+                                    {msActivo >= 0 && <li className="text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">msActivo :</h5> {msActivo}</li>}
+                                    {rassiGateWay >= 0 && <li className=" text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">rassiGateWay :</h5> {rassiGateWay}</li>}
+                                    {resistance >= 0 && <li className=" text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">resistance :</h5> {resistance}</li>}
+                                    {temperature >= 0 && <li className=" text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">temperature :</h5> {temperature}</li>}
+                                    {nMessages >= 0 && <li className=" text-start text-light device-list"><h5 className="device-meter-list text-light mb-2" htmlFor="">nMessages :</h5> {nMessages}</li>}
+                                    </div>
+                                </div>
+                               </div>
                                 
-                                <ul className="row device-meter-list-container">
-                                    {txPower >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">txPower :</h5> {txPower}</li>}
-                                    {rssiGateway >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">rssiGateway :</h5> {rssiGateway}</li>}
-                                    {nMedicion >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">nMedicion :</h5> {nMedicion}</li>}
-                                    {msActivo >= 0 && <li className="text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">msActivo :</h5> {msActivo}</li>}
-                                </ul>
-                                <ul className="row d-flex justify-content-lg-around text-dark device-meter-list-container">
-                                    {rassiGateWay >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">rassiGateWay :</h5> {rassiGateWay}</li>}
-                                    {resistance >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">resistance :</h5> {resistance}</li>}
-                                    {temperature >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">temperature :</h5> {temperature}</li>}
-                                    {nMessages >= 0 && <li className=" text-start text-dark device-list"><h5 className="device-meter-list" htmlFor="">nMessages :</h5> {nMessages}</li>}
-                                </ul>
                             </div>
                     </div>
 

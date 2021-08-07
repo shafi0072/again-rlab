@@ -63,7 +63,9 @@ const Devices = () => {
     return (
 
         <div>
-            {user.admin && <Form unstackable="unstackable" onSubmit={handleSubmit}>
+            {user.admin && <div className="mainFormWidth">
+                <div className="deviceMainForm">
+                <Form unstackable="unstackable" onSubmit={handleSubmit}>
                 <Form.Group widths={2}>
                     <Form.Input
                         required
@@ -107,8 +109,10 @@ const Devices = () => {
                         onChange={handleChange}
                         placeholder='30.35'/>
                 </Form.Group>
-                <button className="btn btn-primary">Add/Save</button>
-            </Form>}
+                <button className="btn btn-Custom" >Add/Save</button>
+            </Form>
+            </div>
+            </div>}
             {
                 devices.map(data => {return <DeviceList key={data.key} data={data}/>})
             }
