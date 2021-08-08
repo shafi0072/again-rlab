@@ -60,7 +60,7 @@ const DeveiceMeter = (props) => {
     }
     const handleDay =() => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = true;
         newClick.halfDay = false;
@@ -70,7 +70,7 @@ const DeveiceMeter = (props) => {
     }
     const handleHalfDay = () => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = false;
         newClick.halfDay = true;
@@ -80,7 +80,7 @@ const DeveiceMeter = (props) => {
     }
     const handleSixH = () => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = false;
         newClick.halfDay = false;
@@ -90,7 +90,7 @@ const DeveiceMeter = (props) => {
     }
     const handleOneH = () => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = false;
         newClick.halfDay = false;
@@ -126,14 +126,34 @@ const DeveiceMeter = (props) => {
             name: "Vcc1",
             showInLegend: true,
             dataPoints:[{}],
-        }
+        },
+        {
+            type: "line",
+            name: "Vcc2",
+            showInLegend: true,
+            dataPoints:[{}],
+        },
+        {
+            type: "line",
+            name: "Vcc3",
+            showInLegend: true,
+            dataPoints:[{}],
+        },
+
        
     ]
 }
     for(let i =0; i < props.pastData.length; i++){
-        
-        let elements = {y:props.pastData[i].voltage01, label: "1week"};
+        const date = new Date(props.pastData[i].dateSocket)
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+        const day = date.getUTCDay()
+        let elements = {y:props.pastData[i].voltage01, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
         options.data[0].dataPoints[i] = elements
+        let elements2 = {y:props.pastData[i].voltage02, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
+        options.data[1].dataPoints[i] = elements2
+        let elements3 = {y:props.pastData[i].voltage03, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
+        options.data[2].dataPoints[i] = elements3
     }
     
        
