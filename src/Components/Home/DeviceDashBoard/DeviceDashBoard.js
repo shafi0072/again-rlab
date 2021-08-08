@@ -121,14 +121,14 @@ const DeviceDashBoard = () => {
          
             else if(user.oneH === true){
             let unixToOneH = UnixTimeFOrToday - 3.6e+6;
-            db.collection(id).where("dateSocket", ">=", unixToOneH).where("dateSocket", "<=", UnixTimeFOrToday).limit(100)
+            db.collection(id).where("dateSocket", ">=", unixToOneH).where("dateSocket", "<=", UnixTimeFOrToday)
             .onSnapshot((querySnapshot) => {
               let getDataFirebase = [];
                 querySnapshot.forEach((doc) => {
                     // doc.data() is never undefined for query doc snapshots
                     getDataFirebase.push({...doc.data(),key: doc.id});
                 });
-                setOneH(getDataFirebase[23])
+                setPastData(getDataFirebase)
             })
             }
             
