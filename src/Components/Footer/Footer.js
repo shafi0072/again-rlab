@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
                
                 <div className="copyright-footer text-center py-3">
-                    <p>© 2019 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved. INSPIRO</p>
+                    <p>© 2021 - Copyright By RLAB. All Rights Reserved. RLAB</p>
                 </div>
             </div>
         </div>
