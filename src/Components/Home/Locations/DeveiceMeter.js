@@ -60,7 +60,7 @@ const DeveiceMeter = (props) => {
     }
     const handleDay =() => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = true;
         newClick.halfDay = false;
@@ -70,7 +70,7 @@ const DeveiceMeter = (props) => {
     }
     const handleHalfDay = () => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = false;
         newClick.halfDay = true;
@@ -80,7 +80,7 @@ const DeveiceMeter = (props) => {
     }
     const handleSixH = () => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = false;
         newClick.halfDay = false;
@@ -90,7 +90,7 @@ const DeveiceMeter = (props) => {
     }
     const handleOneH = () => {
         const newClick = {...user}
-        newClick.present = false
+        newClick.present = true
         newClick.week= false;
         newClick.day = false;
         newClick.halfDay = false;
@@ -108,77 +108,56 @@ const DeveiceMeter = (props) => {
     var seconds = "0" + date.getSeconds();
     var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
     const fullTIme = `${fullDate}/${month}/${year}`
-    
 
-    
-        const options = {
-            animationEnabled: true,	
-            theme: "light2",
-            title:{
-                text: "VCC"
-            },
-            axisY : {
-                title: "Number of Vcc"
-            },
-            toolTip: {
-                shared: true
-            },
-            data: [{
-                type: "line",
-                name: "Vcc1",
-                showInLegend: true,
-                dataPoints: [
-                    { y:  props.pastData.voltage01, label: "1 Week" },
-                    { y: props.day.voltage01, label: "1 Day" },
-                    { y: props.halfDay.voltage01, label: "12 Hours" },
-                    { y: props.sixH.voltage01, label: "6 Hours" },
-                    { y: props.oneH.voltage01, label: "1 Hours" },
-                    { y: voltage01, label: "Current" },
-                    
-                ]
-            },
-            {
-                type: "line",
-                name: "Vcc2",
-                showInLegend: true,
-                dataPoints: [
-                    { y:  props.pastData.voltage02, label: "1 Week" },
-                    { y: props.day.voltage02, label: "1 Day" },
-                    { y: props.halfDay.voltage02, label: "12 Hours" },
-                    { y: props.sixH.voltage02, label: "6 Hours" },
-                    { y: props.oneH.voltage02, label: "1 Hours" },
-                    { y: voltage02, label: "Current" },
-                ]
-            },
-            {
-                type: "line",
-                name: "Vcc3",
-                showInLegend: true,
-                dataPoints: [
-                    { y:  props.pastData.voltage03, label: "1 Week" },
-                    { y: props.day.voltage03, label: "1 Day" },
-                    { y: props.halfDay.voltage03, label: "12 Hours" },
-                    { y: props.sixH.voltage03, label: "6 Hours" },
-                    { y: props.oneH.voltage03, label: "1 Hours" },
-                    { y: voltage03, label: "Current" },
-                ]
-            },
-            {
-                type: "line",
-                name: "Vcc4",
-                showInLegend: true,
-                dataPoints: [
-                    { y:  props.pastData.voltage04, label: "1 Week" },
-                    { y: props.day.voltage04, label: "1 Day" },
-                    { y: props.halfDay.voltage04, label: "12 Hours" },
-                    { y: props.sixH.voltage04, label: "6 Hours" },
-                    { y: props.oneH.voltage04, label: "1 Hours" },
-                    { y: voltage04, label: "Current" },
-                ]
-            }
-        ]
+    const options = {
+        animationEnabled: true,	
+        theme: "light2",
+        title:{
+            text: "VCC"
+        },
+        axisY : {
+            title: "Number of Vcc"
+        },
+        toolTip: {
+            shared: true
+        },
+        data: [{
+            type: "line",
+            name: "Vcc1",
+            showInLegend: true,
+            dataPoints:[{}],
+        },
+        {
+            type: "line",
+            name: "Vcc2",
+            showInLegend: true,
+            dataPoints:[{}],
+        },
+        {
+            type: "line",
+            name: "Vcc3",
+            showInLegend: true,
+            dataPoints:[{}],
+        },
+
+       
+    ]
+}
+    for(let i =0; i < props.pastData.length; i++){
+        const date = new Date(props.pastData[i].dateSocket)
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+        const day = date.getUTCDay()
+        let elements = {y:props.pastData[i].voltage01, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
+        options.data[0].dataPoints[i] = elements
+        let elements2 = {y:props.pastData[i].voltage02, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
+        options.data[1].dataPoints[i] = elements2
+        let elements3 = {y:props.pastData[i].voltage03, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
+        options.data[2].dataPoints[i] = elements3
     }
     
+       
+    console.log({options})
 
     
     return (
@@ -248,7 +227,7 @@ const DeveiceMeter = (props) => {
                         </div>}
                     </div>
                 </div>
-                {voltage01 && <CanvasJSChart options = {options}/>}
+                 <CanvasJSChart options = {options}/>
                 <div className="chart-btn">
                     <ul className="d-flex justify-content-end chart-lists">
                         <li className="bg-success chart-list text-light graphColor" onClick={handleWeek}>1W</li>
