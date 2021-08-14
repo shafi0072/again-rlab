@@ -15,6 +15,8 @@ import MainDevices from './Components/Home/Devices/MainDevices';
 import MainLocation from './Components/Home/Locations/MainLocation';
 import MainCommand from './Components/Home/Command/MainCommand';
 import LocationDevice from './Components/Home/Locations/LocationDevice';
+import DashboardMain from './Components/Home/Locations/Dashboard/DashboardMain';
+
 
 
 
@@ -68,10 +70,9 @@ const App = () => {
         <PrivateRoute path = '/userHome'>
           <UserHome/>
         </PrivateRoute>
-        
         <Route path='/restPassword' component={RestPassword}/>
         <Route path ='/command' component={MainCommand}/>
-        
+        <Route path = '/meter2' component={DashboardMain}/>
       </Switch>
     </Router>
     </userContext.Provider>

@@ -17,18 +17,12 @@ const DeviceDashBoard = () => {
     const [status, setStatus] = useState([])
     
     const [pastData, setPastData] = useState([]);
-    const [day, setDay] = useState([]);
-    const [halfDay, setHalfDay] = useState([]);
-    const [sixH, setSixH] = useState([]);
-    const [oneH, setOneH] = useState([]);
+    
     
 
     const [user] = useContext(userContext)
 
     
-    
-
-
     useEffect(() => {
         if (user.present === true) {
             const userDb = db
@@ -134,9 +128,9 @@ const DeviceDashBoard = () => {
             
             
           
-    }, [user, id,setOneH, setHalfDay, setSixH, setDay, setPastData]);
+    }, [user, id,setPastData]);
     
-    
+    console.log({pastData})
     return (
         <div className='row'>
             <div className="col-md-1">

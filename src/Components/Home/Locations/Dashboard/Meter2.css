@@ -1,0 +1,29 @@
+.bodyBackground{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 241, 241);
+}
+.headerLis{
+    display: inline-block;
+    
+}
+.headerUnOderdList{
+    list-style-type: disc;
+}
+.HeaderLeftSide{
+    width: 50%;
+}
+.listStyle{
+    list-style: none;
+}
+.HeaderToplist{
+    display: inline-block;
+}
+.bg-customs{
+    background-color: white;
+    box-shadow: 40px 40px 40px lightgray;
+}
+.boxMakingFor{
+    box-shadow: 20px 20px 16px 1px lightgrey; 
+    border-radius: 10px;
+}
