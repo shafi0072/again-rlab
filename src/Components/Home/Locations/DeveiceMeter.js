@@ -49,11 +49,11 @@ const DeveiceMeter = (props) => {
         setVoltageData(newVoltage);
     }
     const handleWeek = () => {
-        const newClick = {...props.pastDataTrig}
+        const newClick = {...user}
         newClick.present = true
         newClick.week= true;
-        newClick.day = true;
-        newClick.halfDay = true;
+        newClick.day = false;
+        newClick.halfDay = false;
         newClick.sixH= true;
         newClick.oneH= true;
         setUser(newClick)
@@ -154,6 +154,8 @@ const DeveiceMeter = (props) => {
         options.data[1].dataPoints[i] = elements2
         let elements3 = {y:props.pastData[i].voltage03, label:`days:${day},Hours: ${hours},minutes:${minutes}`};
         options.data[2].dataPoints[i] = elements3
+
+        
     }
     
        
