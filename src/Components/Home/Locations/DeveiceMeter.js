@@ -157,7 +157,7 @@ const DeveiceMeter = (props) => {
     }
     
        
-    console.log({options})
+    console.log({options});
 
     
     return (

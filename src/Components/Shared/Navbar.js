@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-
+import './NavbarResponsive.css'
 import {Link} from 'react-router-dom'
 import {useContext} from 'react';
 import {userContext} from './../../App';
@@ -68,7 +68,7 @@ const Navbar = () => {
                 </div>
                 <ul className="nav-list">
                     <li>
-                        <i className='bx bx-search' onClick={serch}></i>
+                        <i className='bx bx-search' id="searchIcon" onClick={serch}></i>
                         <input type="text" placeholder="Search..."/>
                         <span className="tooltip">Search</span>
                     </li>
