@@ -22,39 +22,6 @@ import { userContext } from '../../../../App';
 
 
 
-const data2 = {
-    labels: ['1', '2', '3', '4', '5', '6'],
-    datasets: [
-      {
-        label: '# of Red Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: 'rgb(255, 99, 132)',
-      },
-      {
-        label: '# of Blue Votes',
-        data: [2, 3, 20, 5, 1, 4],
-        backgroundColor: 'rgb(54, 162, 235)',
-      },
-      {
-        label: '# of Green Votes',
-        data: [3, 10, 13, 15, 22, 30],
-        backgroundColor: 'rgb(75, 192, 192)',
-      },
-    ],
-  };
-  
-
-const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  };
 
 
 const BodyOne = (props) => {
@@ -80,7 +47,7 @@ const BodyOne = (props) => {
     const fullTIme = `${fullDate}/${month}/${year}`
 
     //   event handler for past data
-    const handleWeek = () => {
+    const handleWeek = (e) => {
         const newClick = {...props.pastDataTrig}
         newClick.present = true
         newClick.week= true;
@@ -89,8 +56,9 @@ const BodyOne = (props) => {
         newClick.sixH= true;
         newClick.oneH= true;
         setUser(newClick)
+        e.preventDefault()
     }
-    const handleDay =() => {
+    const handleDay =(e) => {
         const newClick = {...user}
         newClick.present = true
         newClick.week= false;
@@ -99,8 +67,9 @@ const BodyOne = (props) => {
         newClick.sixH= false;
         newClick.oneH= false;
         setUser(newClick)
+        e.preventDefault()
     }
-    const handleHalfDay = () => {
+    const handleHalfDay = (e) => {
         const newClick = {...user}
         newClick.present = true
         newClick.week= false;
@@ -109,8 +78,9 @@ const BodyOne = (props) => {
         newClick.sixH= false;
         newClick.oneH= false;
         setUser(newClick)
+        e.preventDefault()
     }
-    const handleSixH = () => {
+    const handleSixH = (e) => {
         const newClick = {...user}
         newClick.present = true
         newClick.week= false;
@@ -119,8 +89,9 @@ const BodyOne = (props) => {
         newClick.sixH= true;
         newClick.oneH= false;
         setUser(newClick)
+        e.preventDefault()
     }
-    const handleOneH = () => {
+    const handleOneH = (e) => {
         const newClick = {...user}
         newClick.present = true
         newClick.week= false;
@@ -129,6 +100,7 @@ const BodyOne = (props) => {
         newClick.sixH= false;
         newClick.oneH= true;
         setUser(newClick)
+        e.preventDefault()
     }
     const data = {
         labels: [],
@@ -154,6 +126,41 @@ const BodyOne = (props) => {
             }
         ]
       };
+
+      
+const data2 = {
+    labels: [],
+    datasets: [
+      {
+        label: 'Vcc1',
+        data: [],
+        backgroundColor: 'rgb(255, 99, 132)',
+      },
+      {
+        label: 'Vcc2',
+        data: [],
+        backgroundColor: 'rgb(54, 162, 235)',
+      },
+      {
+        label: 'Vcc3',
+        data: [],
+        backgroundColor: 'rgb(75, 192, 192)',
+      },
+    ],
+  };
+  
+
+const options = {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: false,
+          },
+        },
+      ],
+    },
+  };
     for(let i =0; i < props.pastData.length; i++){
         const date = new Date(props.pastData[i].dateSocket)
         const hours = date.getHours()
@@ -161,26 +168,33 @@ const BodyOne = (props) => {
         const day = date.getUTCDay()
         let elements = props.pastData[i].voltage01;
         data.datasets[0].data[i] = elements;
-
+        data2.datasets[0].data[i] = elements;
         let elements2 = props.pastData[i].voltage02;
         data.datasets[1].data[i] = elements2;
+        data2.datasets[1].data[i] = elements2;
         let elements3 =  props.pastData[i].voltage03;
         data.datasets[2].data[i] = elements3;
+        data2.datasets[2].data[i] = elements3;
 
         if(user.week){
             data.labels[i] = `days:${day}` 
+            data2.labels[i] = `days:${day}` 
         }
         else if (user.day){
             data.labels[i] = `days:${day}` 
+            data2.labels[i] = `days:${day}` 
         }
         else if(user.halfDay){
-            data.labels[i] = `days:${day}` 
+            data.labels[i] = `days:${day}`
+            data2.labels[i] = `days:${day}`  
         }
         else if(user.sixH){
             data.labels[i] = `days:${day}`
+            data2.labels[i] = `days:${day}`
         }
         else if(user.oneH){
             data.labels[i] = `days:${day}`
+            data2.labels[i] = `days:${day}`
         }
     }
 
