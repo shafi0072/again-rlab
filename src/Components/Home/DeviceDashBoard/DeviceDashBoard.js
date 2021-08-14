@@ -10,6 +10,7 @@ import {useParams} from "react-router-dom";
 import db from '../../FirebaseConfig/Firebase'
 import {useContext} from 'react';
 import {userContext} from '../../../App';
+import HeaderDashBoard from '../Locations/Dashboard/HeaderDashBoard';
 
 const DeviceDashBoard = () => {
     let {format, id} = useParams();
@@ -145,7 +146,8 @@ const DeviceDashBoard = () => {
                     }}
                     className='mt-5'/>
 
-                <DeveiceMeter data={status} pastData={pastData}/>
+                {/* <DeveiceMeter data={status} pastData={pastData}/> */}
+                <HeaderDashBoard data={status} pastData={pastData}/>
             </div>
         </div>
     );
