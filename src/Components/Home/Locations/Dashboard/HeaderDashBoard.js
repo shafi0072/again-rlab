@@ -5,9 +5,9 @@ import HeaderTop from './HeaderTop';
 const HeaderDashBoard = (props) => {
     return (
         <div className="">
-            <HeaderTop/>
+            <HeaderTop id={props.id}/>
             <div className="mt-3">
-            <BodyOne data={props.data} pastData={props.pastData}/>
+            <BodyOne data={props.data} pastData={props.pastData} />
             </div>
         </div>
     );

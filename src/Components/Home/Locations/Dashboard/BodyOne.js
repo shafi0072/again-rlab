@@ -176,23 +176,23 @@ const options = {
         data.datasets[2].data[i] = elements3;
         data2.datasets[2].data[i] = elements3;
 
-        if(user.week){
+        if(user.week === true){
             data.labels[i] = `days:${day}` 
             data2.labels[i] = `days:${day}` 
         }
-        else if (user.day){
+        else if (user.day === true){
             data.labels[i] = `days:${day}` 
             data2.labels[i] = `days:${day}` 
         }
-        else if(user.halfDay){
+        else if(user.halfDay === true){
             data.labels[i] = `days:${day}`
             data2.labels[i] = `days:${day}`  
         }
-        else if(user.sixH){
+        else if(user.sixH === true){
             data.labels[i] = `days:${day}`
             data2.labels[i] = `days:${day}`
         }
-        else if(user.oneH){
+        else if(user.oneH === true){
             data.labels[i] = `days:${day}`
             data2.labels[i] = `days:${day}`
         }
@@ -351,7 +351,7 @@ const options = {
                 </div>
             </div>
             <div className="col-md-3">
-            <div className="bg-light boxMakingFor" style={{width:'100%', height:'350px'}}>
+            <div className="bg-light boxMakingFor" style={{width:'100%', height:'390px'}}>
                 <div className="ps-3 pt-2">
                         <h4>TxPower:</h4>
                     </div>
