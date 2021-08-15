@@ -134,10 +134,10 @@ const DeviceDashBoard = () => {
     console.log({pastData})
     return (
         <div className='row'>
-            <div className="col-md-1">
+            <div className="col-md-2">
                 <Navbar/>
             </div>
-            <div className="col-md-11 text-center">
+            <div className="col-md-10 text-center" style={{position:'absolute', marginLeft:'18%' }}>
                 <img
                     src={logo}
                     alt=""
