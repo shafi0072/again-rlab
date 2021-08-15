@@ -1,0 +1,100 @@
+
+/* #### Max Width 1399px ----- View 1300px  ####### */
+
+@media(max-width:1399px){
+    #meter-icon{
+        font-size: 40px;
+    }
+}
+
+/* #### Max Width 1299px ----- View 1200px  ####### */
+
+@media(max-width:1299px){
+    .meter-item-title{
+        font-size: 14.5px!important;
+    }
+    .meter-item{
+        font-size: 12px!important;
+    }
+    .meter-item-value{
+        font-size: 12px!important;
+    }
+    #meter-icon{
+        font-size: 35px;
+    }
+}
+
+/* #### Max Width 1199px ----- View 1000px  ####### */
+
+@media(max-width:1199px){
+    .meter-item-title{
+        font-size: 13.5px!important;
+    }
+    .meter-item{
+        font-size: 11px!important;
+    }
+    .meter-item-value{
+        font-size: 11px!important;
+    }
+    #meter-icon{
+        font-size: 27px;
+    }
+}
+
+/* #### Max Width 999px ----- View 850px  ####### */
+
+@media(max-width:999px){
+    .meter-item-title{
+        font-size: 11.5px!important;
+    }
+    .meter-item{
+        font-size: 10px!important;
+    }
+    .meter-item-value{
+        font-size: 10px!important;
+    }
+    #meter-icon{
+        font-size: 22px;
+    }
+}
+
+/* #### Max Width 849px ----- View 700px  ####### */
+
+@media(max-width:849px){
+    .meter-item-title{
+        font-size: 10px!important;
+    }
+    .meter-item{
+        font-size: 9px!important;
+    }
+    .meter-item-value{
+        font-size: 9px!important;
+    }
+    #meter-icon{
+        font-size: 19px;
+    }
+}
+
+@media(max-width:767px){
+
+}
+/* #### Max Width 699px ----- View 600px  ####### */
+
+@media(max-width:699px){
+
+}
+
+/* #### Max Width 599px ----- View 400px  ####### */
+
+@media(max-width:599px){
+
+}
+
+
+/* #### Max Width 399px ----- View 300px  ####### */
+
+@media(max-width:399px){
+
+}
+
+

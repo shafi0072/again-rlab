@@ -11,7 +11,7 @@ import db from '../../FirebaseConfig/Firebase'
 import {useContext} from 'react';
 import {userContext} from '../../../App';
 import HeaderDashBoard from '../Locations/Dashboard/HeaderDashBoard';
-import './DeviceDashBoard.css'
+
 const DeviceDashBoard = () => {
     let {format, id} = useParams();
 
@@ -133,13 +133,21 @@ const DeviceDashBoard = () => {
     
     console.log({pastData})
     return (
-        <div className='row dashDisplay'>
-            <div className="col-md-1">
+        <div className='row'>
+            <div className="col-md-2">
                 <Navbar/>
             </div>
-            <div className="col-md-11 ">
-                
-                <HeaderDashBoard data={status} pastData={pastData} id={id}/>
+            <div className="col-md-10 text-center" style={{position:'absolute', marginLeft:'18%' }}>
+                <img
+                    src={logo}
+                    alt=""
+                    style={{
+                        width: '20%'
+                    }}
+                    className='mt-5'/>
+
+                {/* <DeveiceMeter data={status} pastData={pastData}/> */}
+                <HeaderDashBoard data={status} pastData={pastData}/>
             </div>
         </div>
     );
