@@ -1,6 +1,8 @@
 import React from 'react';
 import './Home.css';
-import AccessibleIcon from '@material-ui/icons/Accessible';
+import DeveloperBoardIcon from '@material-ui/icons/DeveloperBoard';
+import DevicesIcon from '@material-ui/icons/Devices';
+import ControlCameraIcon from '@material-ui/icons/ControlCamera';
 
 const Service = () => {
     return (
@@ -14,33 +16,33 @@ const Service = () => {
                         <div className="col-md-4">
                             <div className="service-item d-flex">
                                 <div className="icon">
-                                    <div><AccessibleIcon id="service-icon"/></div>
+                                    <div><DeveloperBoardIcon id="service-icon"/></div>
                                 </div>
                                 <div className="item-detail">
-                                    <h2 className="detail-head">Powerful template</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, odio quis quaerat fuga accusamus quidem.</p>
+                                    <h2 className="detail-head">PCB Provider</h2>
+                                    <p>PCB Solutions is a printed circuit board manufacturer providing printed circuit boards, assemblies, connectivity solutions and enclosures for the dynamic electronics industry.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="service-item d-flex">
                                 <div className="icon">
-                                    <div><AccessibleIcon id="service-icon"/></div>
+                                    <div><DevicesIcon id="service-icon"/></div>
                                 </div>
                                 <div className="item-detail">
-                                    <h2 className="detail-head">Powerful template</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, odio quis quaerat fuga accusamus quidem.</p>
+                                    <h2 className="detail-head">IOT Provider</h2>
+                                    <p>Research predicts major uptick in enterprise IT spending, spurred by edge, 5G and private network investments, representing significant opportunity for communications service providers in 2022 and beyond</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="service-item d-flex">
                                 <div className="icon">
-                                    <div><AccessibleIcon id="service-icon"/></div>
+                                    <div><ControlCameraIcon id="service-icon"/></div>
                                 </div>
                                 <div className="item-detail">
-                                    <h2 className="detail-head">Powerful template</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, odio quis quaerat fuga accusamus quidem.</p>
+                                    <h2 className="detail-head">Micro Provider</h2>
+                                    <p>Ingram Micro Commerce & Lifecycle Services provides global supply chain solutions that connect supply and demand. From cross-border fulfillment to dropship and returns management, IT asset disposition, re-marketing, distribution and more, our solutions drive growth across the commerce and technology markets.</p>
                                 </div>
                             </div>
                         </div>

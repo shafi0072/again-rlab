@@ -100,8 +100,8 @@ const Navbar = () => {
                 <ul className="nav-list">
                     <li>
                         <i className='bx bx-search' onClick={serch}></i>
-                        <input type="text" placeholder="Search..."/>
-                        <span className="tooltip">Search</span>
+
+                <span className="tooltip">Search</span>
                     </li>
                     <li>
                         <Link to="/userHome">
@@ -122,7 +122,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </li>
-                    <li>
+            u         <li>
                         <Link to="/devices">
                             <i className='bx bxs-devices'></i>
                             <span className="links_name">Device</span>

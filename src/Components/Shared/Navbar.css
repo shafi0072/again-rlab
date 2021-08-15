@@ -11,7 +11,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 08%;
+  width: 15.5%;
   background: #11101D;
   padding: 6px 14px;
   z-index: 100;
@@ -46,15 +46,17 @@
   top: 53%;
   right: 12%;
   transform: translateY(-59%);
-  font-size: 22px;
+  font-size: 30px;
   transition: all 0.4s ease-in-out;
   font-size: 23px;
   text-align: center;
   cursor: pointer;
+  margin-left: 25%;
   transition: all 0.5s ease-in-out;
 }
 .sidebar.open .logo-details #btn{
   text-align: right;
+  margin-left: 0%;
 }
 .sidebar i{
   color: #fff;
@@ -110,10 +112,12 @@
   border-radius: 12px;
   transition: all 0.5s ease;
   background: #1d1b31;
+  margin-left: 30%;
 }
 .sidebar.open input{
   padding: 0 20px 0 50px;
   width: 100%;
+  margin-left: 0%;
 }
 .sidebar .bx-search{
   position: absolute;
@@ -135,7 +139,8 @@
 .sidebar li a{
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 73%;
+  margin-left: 35%;
   border-radius: 12px;
   align-items: center;
   text-decoration: none;
@@ -154,6 +159,9 @@
   pointer-events: none;
   transition: 0.4s;
 }
+.sidebar.open li a{
+  margin-left: 0%;
+}
 .sidebar.open li a .links_name{
   opacity: 1;
   pointer-events: auto;
@@ -168,11 +176,18 @@
   line-height: 50px;
   font-size: 18px;
   border-radius: 12px;
+  transition: all 0.5s ease;
+}
+.sidebar #searchIcon{
+  margin-left: 30%;
+}
+.sidebar.open #searchIcon{
+  margin-left: 0;
 }
 .sidebar li.profile{
   position: fixed;
   height: 60px;
-  width: 08%;
+  width: 15.5%;
   left: 0;
   bottom: -8px;
   padding: 10px 14px;
@@ -208,7 +223,7 @@
 .sidebar .profile #log_out{
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -15%;
   transform: translateY(-50%);
   background: #1d1b31;
   width: 100%;
@@ -219,6 +234,7 @@
 }
 .sidebar.open .profile #log_out{
   width: 08%;
+  right: 0%;
   background: none;
 }
 .home-section{
