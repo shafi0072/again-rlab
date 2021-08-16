@@ -7,7 +7,7 @@ const HeaderDashBoard = (props) => {
         <div className="">
             <HeaderTop id={props.id}/>
             <div className="mt-3">
-            <BodyOne data={props.data} pastData={props.pastData} />
+            <BodyOne data={props.data} pastData={props.pastData} lid={props.Lid}/>
             </div>
         </div>
     );

@@ -1,3 +1,4 @@
+/* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -10,14 +11,14 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 15.5%;
+  width: 10%;
   background: #11101D;
   padding: 6px 14px;
   z-index: 100;
   transition: all 0.5s ease;
 }
 .sidebar.open{
-  width: 250px;
+  width: 350px;
 }
 .sidebar .logo-details{
   height: 60px;
@@ -43,7 +44,7 @@
 .sidebar .logo-details #btn{
   position: relative;
   top: 53%;
-  right: 12%;
+  right: 10%;
   transform: translateY(-59%);
   font-size: 30px;
   transition: all 0.4s ease-in-out;
@@ -186,7 +187,7 @@
 .sidebar li.profile{
   position: fixed;
   height: 60px;
-  width: 15.5%;
+  width: 10%;
   left: 0;
   bottom: -8px;
   padding: 10px 14px;
@@ -195,7 +196,7 @@
   overflow: hidden;
 }
 .sidebar.open li.profile{
-  width: 250px;
+  width: 350px;
 }
 .sidebar li .profile-details{
   display: flex;

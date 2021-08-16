@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import {useContext} from 'react';
 import {userContext} from './../../App';
 import {useHistory, useLocation} from 'react-router-dom';
-import db from './../FirebaseConfig/Firebase';
+import db from '../FirebaseConfig/Firebase'
 const Navbar = () => {
 
    
@@ -14,37 +14,26 @@ const Navbar = () => {
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
-    const [locations, setLocations] = useState([]);
-    const [viewLocation, setViewLocation] = useState({
-        open: false,
-        close: true,
+    const [locations, setLocations] = useState([])
+    const [locationView, setLocationView] = useState({
+        open:false,
+        close: true
     })
 
 
-    
    async function btnCLick() {
        let sidebar = await document.querySelector(".sidebar");
      await   sidebar
             .classList
             .toggle("open");
-        menuBtnChange(); //calling the function(optional);
-        const newLocation = {...viewLocation};
-        newLocation.open = true;
-        newLocation.close = false;
-        setViewLocation(newLocation)
+        menuBtnChange(); //calling the function(optional)
+        const newClick = {...locationView}
+        newClick.open = true;
+        newClick.close = false;
+        setLocationView(newClick);
     };
 
-    async  function serch() { // Sidebar open when you click on the search iocn
-        let sidebar = await document.querySelector(".sidebar");
-      await  sidebar
-            .classList
-            .toggle("open");
-        menuBtnChange(); //calling the function(optional)
-        const newLocation = {...viewLocation};
-        newLocation.open = true;
-        newLocation.close = false;
-        setViewLocation(newLocation)
-    };
+  
 
     // following are the code to change sidebar button(optional)
   async  function menuBtnChange() {
@@ -54,16 +43,14 @@ const Navbar = () => {
            await closeBtn
                 .classList
                 .replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
-
-               
         } else {
           await  closeBtn
                 .classList
                 .replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
-                const newLocation = {...viewLocation};
-                newLocation.open = false;
-                newLocation.close = true;
-                setViewLocation(newLocation)
+                const newClick = {...locationView}
+        newClick.open = false;
+        newClick.close = true;
+        setLocationView(newClick);
         }
     }
 
@@ -84,11 +71,12 @@ const Navbar = () => {
             querySnapshot.forEach((doc) => {
               getDataFirebase.push({...doc.data(), key:doc.id});
             });
-            setLocations(getDataFirebase)
-            
+            setLocations(getDataFirebase);
+           
         });
         return userDb;
-    }, [locations])
+    }, [locations]);
+
     return (
         <div>
             <div className="sidebar">
@@ -98,11 +86,6 @@ const Navbar = () => {
                     <i className='bx bx-menu' id="btn" onClick={btnCLick}></i>
                 </div>
                 <ul className="nav-list">
-                    <li>
-                        <i className='bx bx-search' onClick={serch}></i>
-
-                <span className="tooltip">Search</span>
-                    </li>
                     <li>
                         <Link to="/userHome">
                             <i className='bx bx-grid-alt'></i>
@@ -118,11 +101,11 @@ const Navbar = () => {
                         <span className="tooltip">Location</span>
                         <ul>
                             {
-                                viewLocation.open && locations.map(data =>  {return <Link className="location-user-text" to={`/locations/${data.key}`}><li className="links_name">{data.LocationID}</li></Link>})
+                                locationView.open  &&  locations.map(data => {return <div><Link className="location-user-text" ><li className="links_name ms-5" style={{borderBottom:'1px solid white'}}>{data.LocationID}</li></Link><ul><Link title="select" to={`/location/${data.key}/${data.Device_id_1}`}  ><li className="links_name ms-5">{data.Device_id_1}</li></Link> <Link title="select" to={`/location/${data.key}/${data.Device_id_2}`}><li className="links_name ms-5">{data.Device_id_2}</li></Link></ul></div>})
                             }
                         </ul>
                     </li>
-            u         <li>
+                    <li>
                         <Link to="/devices">
                             <i className='bx bxs-devices'></i>
                             <span className="links_name">Device</span>

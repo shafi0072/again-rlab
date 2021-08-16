@@ -10,7 +10,7 @@ import {useHistory, useLocation } from 'react-router-dom';
 const Navbar = () => {
     const history = useHistory();
     const location = useLocation();
-
+    
     const { from } = location.state || { from: { pathname: "/" } };
     
     const [user, setUser] = useContext(userContext);

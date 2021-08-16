@@ -64,9 +64,10 @@ const App = () => {
       <Route exact path='/' component={Home}/>
         <Route path='/auth' component={Login} />
         <Route path ="/devices" component={MainDevices}/>
-        <Route path = '/location' component={MainLocation}/>
-        <Route path="/locations/:Lid" component={LocationDevice}/>
-        <Route path="/locationsDevice/:id" component={DeviceDashBoard}/>
+        <Route path = '/location' exact component={MainLocation}/>
+        {/* <Route path="/locations/:Lid" component={LocationDevice}/> */}
+        {/* <Route path="/locationsDevice/:id" component={DeviceDashBoard}/> */}
+        <Route path="/location/:lid/:id" component={DeviceDashBoard}/>
         <PrivateRoute path = '/userHome'>
           <UserHome/>
         </PrivateRoute>

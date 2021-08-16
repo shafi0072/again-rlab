@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Battery60OutlinedIcon from '@material-ui/icons/Battery60Outlined';
 import HealingOutlinedIcon from '@material-ui/icons/HealingOutlined';
 import OpacityOutlinedIcon from '@material-ui/icons/OpacityOutlined';
@@ -12,6 +12,7 @@ import AccessAlarmsOutlinedIcon from '@material-ui/icons/AccessAlarmsOutlined';
 
 import PowerSettingsNewOutlinedIcon from '@material-ui/icons/PowerSettingsNewOutlined';
 
+import db from '../../../FirebaseConfig/Firebase'
 
 import { Line , Bar } from "react-chartjs-2";
 
@@ -19,7 +20,7 @@ import { Line , Bar } from "react-chartjs-2";
 import DevicesOtherIcon from '@material-ui/icons/DevicesOther';
 import { userContext } from '../../../../App';
 
-
+import {Link} from 'react-router-dom'
 
 
 
@@ -28,7 +29,7 @@ import { userContext } from '../../../../App';
 const BodyOne = (props) => {
     // recent status
     const { voltage01, voltage02, voltage03, dateSocket, vBat, txPower, rssiGateway, nMedicion, msActivo,  current01} = props.data;
-
+    const [location, setLocation] = useState({})
 
 
 
@@ -164,8 +165,6 @@ const options = {
   };
     for(let i =0; i < props.pastData.length; i++){
         const date = new Date(props.pastData[i].dateSocket)
-        const hours = date.getHours()
-        const minutes = date.getMinutes()
         const day = date.getUTCDay()
         let elements = props.pastData[i].voltage01;
         data.datasets[0].data[i] = elements;
@@ -177,40 +176,47 @@ const options = {
         data.datasets[2].data[i] = elements3;
         data2.datasets[2].data[i] = elements3;
 
-        if(user.week === true){
+        if(user.week){
             data.labels[i] = `days:${day}` 
             data2.labels[i] = `days:${day}` 
         }
-        else if (user.day === true){
+        else if (user.day){
             data.labels[i] = `days:${day}` 
             data2.labels[i] = `days:${day}` 
         }
-        else if(user.halfDay === true){
+        else if(user.halfDay){
             data.labels[i] = `days:${day}`
             data2.labels[i] = `days:${day}`  
         }
-        else if(user.sixH === true){
+        else if(user.sixH){
             data.labels[i] = `days:${day}`
             data2.labels[i] = `days:${day}`
         }
-        else if(user.oneH === true){
+        else if(user.oneH){
             data.labels[i] = `days:${day}`
             data2.labels[i] = `days:${day}`
         }
     }
+    useEffect(() => {
+        const userDb =  db.collection("location").doc(props.lid).onSnapshot((doc) => {
+            setLocation({...doc.data(), key:doc.id});
+           
+        });
+        return userDb;
+    }, [props.lid])
 
     return (
         <div>
             <div className="row">
             <div className="col-md-2 mb-2">
-                <div className="bg-light d-flex align-items-center justify-content-center boxMakingFor " style={{width:'100%', height:'100%'}}>
+                <div className="bg-light d-flex align-items-center justify-content-center boxMakingFor ps-3" style={{width:'100%', height:'100%'}}>
                     <img style={{maxWidth:'85%', maxHeight:'98%', borderRadius:'10px'}} src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9jYXRpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="" />
                 </div>
             </div>
             <div className="col-md-2 mb-2">
             
                 <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
-                    <div className="pt-2">
+                    <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Battery Health:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -225,7 +231,7 @@ const options = {
             <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
                     <div className="row">
                         <div className="col-md-6">
-                        <div className="pt-2">
+                        <div className="ps-3  pt-2">
                         <h4 className="meter-item-title">Rssi Gateway:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -236,7 +242,7 @@ const options = {
                    </div>
                         </div>
                         <div className="col-md-6">
-                        <div className="pt-2">
+                        <div className="ps-3  pt-2">
                         <h4 className="meter-item-title">N Medicion:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -251,7 +257,7 @@ const options = {
             </div>
             <div className="col-md-3 mb-2">
                 <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
-                <div className="pt-2">
+                <div className="ps-3  pt-2">
                         <h4 className="meter-item-title">MS Active:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -268,7 +274,7 @@ const options = {
             <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
                     <div className="row">
                     <div className="col-md-3">
-                        <div className="pt-2">
+                        <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Voltage 1:</h4>
                         </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -279,7 +285,7 @@ const options = {
                    </div>
                     </div>
                     <div className="col-md-3">
-                    <div className="pt-2">
+                    <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Voltage 2:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -290,7 +296,7 @@ const options = {
                    </div>
                     </div>
                     <div className="col-md-3">
-                    <div className="pt-2">
+                    <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Voltage 3:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -301,7 +307,7 @@ const options = {
                    </div>
                     </div>
                     <div className="col-md-3">
-                    <div className="pt-2">
+                    <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Current:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -318,8 +324,8 @@ const options = {
             <div className="bg-light boxMakingFor" style={{width:'100%', height:'100%'}}>
                     <div className="row">
                         <div className="col-md-6">
-                        <div className="pt-2">
-                        <h4 className="meter-item-title mb-3">Date:</h4>
+                        <div className="ps-3 pt-2">
+                        <h4 className="meter-item-title">Date:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
                    <DateRangeIcon id="meter-icon"/>
@@ -329,7 +335,7 @@ const options = {
                    </div>
                         </div>
                         <div className="col-md-6">
-                        <div className="pt-2">
+                        <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Last Connections:</h4>
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
@@ -352,14 +358,9 @@ const options = {
                 </div>
             </div>
             <div className="col-md-3">
-            <div className="bg-light boxMakingFor" style={{width:'100%', height:'390px'}}>
-                <div className="ps-3 pt-2">
-                        <h4>TxPower:</h4>
-
             <div className="bg-light boxMakingFor" style={{width:'100%', height:'350px'}}>
-                <div className="pt-2">
+                <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">TxPower:</h4>
-
                     </div>
                    <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
                    <PowerSettingsNewOutlinedIcon id="meter-icon"/>
@@ -401,21 +402,30 @@ const options = {
             </div>
             <div className="col-md-3">
             <div className="bg-light boxMakingFor" style={{width:'100%', height:'100%'}}>
-            <div className="pt-2">
+            <div className="ps-3 pt-2">
                         <h4 className="meter-item-title">Other Devices:</h4>
                     </div>
                     <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
                    <DevicesOtherIcon id="meter-icon"/>
                     <div>
-                        <h5 className="meter-item">Device Length:<h3 className="meter-item-value">12004</h3></h5>
+                        <h5 className="meter-item">Device Length:<h3 className="meter-item-value">3 for this location</h3></h5>
                     </div>
+                    
                    </div>
+                   <div className="row mb-3">
+                        <div className="col-md-12 text-center d-flex justify-content-center">
+                        <Link title="select" to={`/location/${location.key}/${location.Device_id_1}`}><h4 >{location.Device_id_1}</h4></Link>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12 text-center d-flex justify-content-center">
+                        <Link title="select" to={`/location/${location.key}/${location.Device_id_2}`}><h4 >{location.Device_id_2}</h4></Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         </div>
-    </div>
-    </div>
     );
 };
 

@@ -30,3 +30,13 @@
 #meter-icon{
     font-size: 40px;
 }
+.deviceHover {
+    transition: all 0.4s ease-in-out;
+    width: 80%;
+    
+}
+.deviceHover:hover{
+    cursor: pointer;
+    background: black;
+    color: white;
+}

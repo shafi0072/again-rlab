@@ -18,14 +18,3 @@
 .dashboard-navbar{
     padding: 0;
 }
-
-@media only screen and (max-width: 600px){
-    .mainComponent{
-        position: relative!important;
-        bottom: -200!important;
-    }
-    .dashDisplay{
-        display: flex!important;
-        justify-content: space-between!important;
-    }
-}

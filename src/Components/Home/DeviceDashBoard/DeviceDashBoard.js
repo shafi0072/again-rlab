@@ -13,7 +13,7 @@ import {userContext} from '../../../App';
 import HeaderDashBoard from '../Locations/Dashboard/HeaderDashBoard';
 
 const DeviceDashBoard = () => {
-    let {format, id} = useParams();
+    let {format, id, lid} = useParams();
 
     const [status, setStatus] = useState([])
     
@@ -134,20 +134,12 @@ const DeviceDashBoard = () => {
     console.log({pastData})
     return (
         <div className='row'>
-            <div className="col-md-2">
+            <div className="col-md-1">
                 <Navbar/>
             </div>
-            <div className="col-md-10 text-center" style={{position:'absolute', marginLeft:'18%' }}>
-                <img
-                    src={logo}
-                    alt=""
-                    style={{
-                        width: '20%'
-                    }}
-                    className='mt-5'/>
-
-                {/* <DeveiceMeter data={status} pastData={pastData}/> */}
-                <HeaderDashBoard data={status} pastData={pastData}/>
+            <div className="col-md-11" style={{position:'absolute', marginLeft:'13%' }}>
+               
+                <HeaderDashBoard data={status} pastData={pastData} id={id} Lid={lid}/>
             </div>
         </div>
     );
