@@ -2386,7 +2386,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 23%;
+    width: 0%;
     background: #11101D;
     padding: 6px 14px;
     z-index: 100;
@@ -2418,9 +2418,10 @@
     opacity: 1;
   }
   .sidebar .logo-details #btn{
-    position: relative;
-    top: 53%;
-    right: 82%;
+    position: absolute;
+    top: 40%;
+    left: 115%;
+    color: black;
     transform: translateY(-59%);
     font-size: 30px;
     transition: all 0.4s ease-in-out;
@@ -2432,8 +2433,9 @@
   }
   .sidebar.open .logo-details #btn{
     text-align: left;
-    margin-left: 82%;
-    margin-top: 1%;
+    margin-left: -99%;
+    margin-top: 3%;
+    color: rgb(255 255 255);
 
   }
   .sidebar i{
@@ -2450,11 +2452,9 @@
     margin-right: 100%!important;
   }
   .sidebar li{
-    position: relative;
-    margin: 8px 0;
+    margin: 10px 0px;
     list-style: none;
-    width: 10px;
-    right: 107%;
+    width: 0px;
   }
   .sidebar li .tooltip{
     position: absolute;
@@ -2570,7 +2570,7 @@
   .sidebar li.profile{
     position: fixed;
     height: 60px;
-    width: 22%;
+    width: 0%;
     left: 0;
     bottom: -8px;
     padding: 10px 14px;
