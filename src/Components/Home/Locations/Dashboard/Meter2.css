@@ -5,7 +5,7 @@
 }
 .headerLis{
     display: inline-block;
-    
+
 }
 .headerUnOderdList{
     list-style-type: disc;
@@ -33,10 +33,30 @@
 .deviceHover {
     transition: all 0.4s ease-in-out;
     width: 80%;
-    
+
 }
 .deviceHover:hover{
     cursor: pointer;
     background: black;
     color: white;
+}
+.control-item-container{
+    width: 65%;
+    margin: 0 auto;
+}
+.top-margin{
+    margin-top: 10px;
+}
+.control-counts{
+    padding-left: 80%;
+    border: 1px solid black;
+    padding-right: 5%;
+}
+.control-counts-right{
+    padding-left: 100%;
+    border: 1px solid black;
+    padding-right: 5%;
+}
+.control-button-container{
+    margin-left: 20px;
 }

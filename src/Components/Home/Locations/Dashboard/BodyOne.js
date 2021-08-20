@@ -21,7 +21,8 @@ import DevicesOtherIcon from '@material-ui/icons/DevicesOther';
 import { userContext } from '../../../../App';
 
 import {Link} from 'react-router-dom'
-
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 
@@ -383,20 +384,54 @@ const options = {
                 </div>
             </div>
             <div className="col-md-3">
-            <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
+            <div className="bg-light boxMakingFor" style={{width:'100%', height:'416px'}}>
                 <div className="ps-3 pt-2">
-                        <h4 className="meter-item-titl text-secondary">Control:</h4>
-                    </div>
-                   <div className="d-flex justify-content-center align-items-center">
-                       <h4>Period:</h4>
-                       <input type="number" name="" id="" value="120"/>
+                        <h4 className="meter-item-title text-secondary">Control:</h4>
+                </div>
+                   <div className="d-flex align-items-center control-item-container mb-2">
+                       <div className="row mt-5">
+                           <div className="col-md-4 top-margin text-start">
+                               <h5 className="meter-item">Period:</h5>
+                            </div>
+                           <div className="col-md-6 ">
+                               <div className="d-flex">
+                                   <div className="control-counts top-margin">
+                                        <span>120</span>
+                                        <span>min</span>
+                                   </div>
+                               </div>
+                           </div>
+                           <div className="col-md-2"> 
+                                <div className="control-button-container">
+                                    <div><ExpandLessIcon/></div>
+                                    <div><ExpandMoreIcon/></div>
+                                </div>
+                           </div>
+                       </div>
                    </div>
-                   <div className="d-flex justify-content-center align-items-center">
-                       <h4>Freq:</h4>
-                       <input type="number" name="" id="" value="120"/>
+                   <div className="d-flex align-items-center control-item-container">
+                   <div className="row ">
+                           <div className="col-md-4 top-margin">
+                               <h5 className="meter-item" style={{marginRight:'30px'}}>Freq:</h5>
+                            </div>
+                           <div className="col-md-6 ">
+                               <div className="d-flex">
+                                   <div className="control-counts-right top-margin">
+                                        <span>2</span>
+                                        <span>sec</span>
+                                   </div>
+                               </div>
+                           </div>
+                           <div className="col-md-2"> 
+                                <div className="control-button-container">
+                                    <div><ExpandLessIcon/></div>
+                                    <div><ExpandMoreIcon/></div>
+                                </div>
+                           </div>
+                       </div>
                    </div>
-                   <div className="d-flex justify-content-center">
-                   <button className="btn btn-primary">In Cycle</button>
+                   <div className="d-flex justify-content-center mt-2">
+                   <button className="btn btn-primary">Init Cycle</button>
                    </div>
                 </div>
                
