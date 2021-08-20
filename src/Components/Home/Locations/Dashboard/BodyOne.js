@@ -338,7 +338,9 @@ const options = {
                 </div>
             </div>
             <div className="col-md-3 mb-2">
-                <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
+                <div className="row">
+                    <div className="col-md-6">
+                    <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
                 <div className="ps-3  pt-2">
                         <h4 className="meter-item-title">MS Active:</h4>
                     </div>
@@ -348,6 +350,21 @@ const options = {
                         <h5 className="meter-item">msActivo:<h3 className="meter-item-value">{msActivo}</h3></h5>
                     </div>
                    </div>
+                </div>
+                    </div>
+                    <div className="col-md-6">
+                    <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
+                <div className="ps-3 pt-2">
+                        <h4 className="meter-item-title">TxPower:</h4>
+                    </div>
+                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
+                   <PowerSettingsNewOutlinedIcon id="meter-icon"/>
+                    <div>
+                        <h5 className="meter-item">TxPower:<h3 className="meter-item-value">{txPower}</h3></h5>
+                    </div>
+                   </div>
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -366,38 +383,21 @@ const options = {
                 </div>
             </div>
             <div className="col-md-3">
-            <div className="bg-light boxMakingFor" style={{width:'100%', height:'350px'}}>
+            <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
                 <div className="ps-3 pt-2">
-                        <h4 className="meter-item-title">TxPower:</h4>
+                        <h4 className="meter-item-titl text-secondary">Control:</h4>
                     </div>
-                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
-                   <PowerSettingsNewOutlinedIcon id="meter-icon"/>
-                    <div>
-                        <h5 className="meter-item">TxPower:<h3 className="meter-item-value">{txPower}</h3></h5>
-                    </div>
+                   <div className="d-flex justify-content-center align-items-center">
+                       <h4>Period:</h4>
+                       <input type="number" name="" id="" value="120"/>
                    </div>
-                   <div className="row mt-2">
-                    <div className="col-md-6 text-center">
-                        
-                    </div>
-                    <div className="col-md-6 text-center">
-                    
-                    </div>
-                </div>
-                <div className="row mt-2">
-                    <div className="col-md-6 text-center">
-                        
-                    </div>
-                    <div className="col-md-6 text-center">
-                    
-                    </div>
-                </div>
-                <div className="row mt-2">
-                    <div className="col-md-12 text-center">
-                        
-                    </div>
-                    
-                </div>
+                   <div className="d-flex justify-content-center align-items-center">
+                       <h4>Freq:</h4>
+                       <input type="number" name="" id="" value="120"/>
+                   </div>
+                   <div className="d-flex justify-content-center">
+                   <button className="btn btn-primary">In Cycle</button>
+                   </div>
                 </div>
                
             </div>
