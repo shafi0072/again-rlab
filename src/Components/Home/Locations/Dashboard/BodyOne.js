@@ -207,68 +207,6 @@ const options = {
 
     return (
         <div>
-            <div className="row">
-            <div className="col-md-2 mb-2">
-                <div className="bg-light d-flex align-items-center justify-content-center boxMakingFor ps-3" style={{width:'100%', height:'100%'}}>
-                    <img style={{maxWidth:'85%', maxHeight:'98%', borderRadius:'10px'}} src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9jYXRpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="" />
-                </div>
-            </div>
-            <div className="col-md-2 mb-2">
-            
-                <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
-                    <div className="ps-3 pt-2">
-                        <h4 className="meter-item-title">Battery Health:</h4>
-                    </div>
-                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
-                   <Battery60OutlinedIcon id="meter-icon"/>
-                    <div>
-                        <h5 className="meter-item">Vbat:<h3 className="meter-item-value">{vBat}</h3></h5>
-                    </div>
-                   </div>
-                </div>
-            </div>
-            <div className="col-md-4 mb-2">
-            <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
-                    <div className="row">
-                        <div className="col-md-6">
-                        <div className="ps-3  pt-2">
-                        <h4 className="meter-item-title">Rssi Gateway:</h4>
-                    </div>
-                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
-                   <OpacityOutlinedIcon id="meter-icon"/>
-                    <div>
-                        <h5 className="meter-item">RssiGateway:<h3 className="meter-item-value">{rssiGateway}</h3></h5>
-                    </div>
-                   </div>
-                        </div>
-                        <div className="col-md-6">
-                        <div className="ps-3  pt-2">
-                        <h4 className="meter-item-title">N Medicion:</h4>
-                    </div>
-                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
-                   <HealingOutlinedIcon id="meter-icon"/>
-                    <div>
-                        <h5 className="meter-item">nMedicion:<h3 className="meter-item-value">{nMedicion}</h3></h5>
-                    </div>
-                   </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="col-md-3 mb-2">
-                <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
-                <div className="ps-3  pt-2">
-                        <h4 className="meter-item-title">MS Active:</h4>
-                    </div>
-                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
-                   <NotificationsActiveOutlinedIcon id="meter-icon"/>
-                    <div>
-                        <h5 className="meter-item">msActivo:<h3 className="meter-item-value">{msActivo}</h3></h5>
-                    </div>
-                   </div>
-                </div>
-            </div>
-        </div>
         <div className="row">
             <div className="col-md-8">
             <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
@@ -351,10 +289,80 @@ const options = {
                    
             </div>
         </div>
+            <div className="row mt-3">
+            <div className="col-md-2 mb-2">
+                <div className="bg-light d-flex align-items-center justify-content-center boxMakingFor ps-3" style={{width:'100%', height:'100%'}}>
+                    <img style={{maxWidth:'85%', maxHeight:'98%', borderRadius:'10px'}} src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9jYXRpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="" />
+                </div>
+            </div>
+            <div className="col-md-2 mb-2">
+            
+                <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
+                    <div className="ps-3 pt-2">
+                        <h4 className="meter-item-title">Battery Health:</h4>
+                    </div>
+                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
+                   <Battery60OutlinedIcon id="meter-icon"/>
+                    <div>
+                        <h5 className="meter-item">Vbat:<h3 className="meter-item-value">{vBat}</h3></h5>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            <div className="col-md-4 mb-2">
+            <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
+                    <div className="row">
+                        <div className="col-md-6">
+                        <div className="ps-3  pt-2">
+                        <h4 className="meter-item-title">Rssi Gateway:</h4>
+                    </div>
+                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
+                   <OpacityOutlinedIcon id="meter-icon"/>
+                    <div>
+                        <h5 className="meter-item">RssiGateway:<h3 className="meter-item-value">{rssiGateway}</h3></h5>
+                    </div>
+                   </div>
+                        </div>
+                        <div className="col-md-6">
+                        <div className="ps-3  pt-2">
+                        <h4 className="meter-item-title">N Medicion:</h4>
+                    </div>
+                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
+                   <HealingOutlinedIcon id="meter-icon"/>
+                    <div>
+                        <h5 className="meter-item">nMedicion:<h3 className="meter-item-value">{nMedicion}</h3></h5>
+                    </div>
+                   </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-3 mb-2">
+                <div className="bg-light boxMakingFor" style={{width:'100%', height:'168px'}}>
+                <div className="ps-3  pt-2">
+                        <h4 className="meter-item-title">MS Active:</h4>
+                    </div>
+                   <div className="d-flex justify-content-center align-items-center" style={{width:'100%', height:'110px'}}>
+                   <NotificationsActiveOutlinedIcon id="meter-icon"/>
+                    <div>
+                        <h5 className="meter-item">msActivo:<h3 className="meter-item-value">{msActivo}</h3></h5>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        
         <div className="row mt-3">
             <div className="col-md-8">
                 <div className="bg-light boxMakingFor" >
                 <Line data={data} height={100}/>
+                <div className="d-flex justify-content-end">
+                <button className="btn btn-dark" style={{width:'120px'}} onClick={handleWeek}>1 Week</button>
+                <button className="btn btn-dark ms-1" style={{width:'120px'}} onClick={handleDay}>1 Day</button>
+                <button className="btn btn-dark ms-1" style={{width:'120px'}} onClick={handleHalfDay}>12 Hours</button>
+                <button className="btn btn-dark ms-1" style={{width:'120px'}} onClick={handleSixH}>6 Hours</button>
+                <button className="btn btn-dark ms-1" style={{width:'120px'}} onClick = {handleOneH}>1 Hour</button>
+                </div>
                 </div>
             </div>
             <div className="col-md-3">
@@ -370,23 +378,23 @@ const options = {
                    </div>
                    <div className="row mt-2">
                     <div className="col-md-6 text-center">
-                        <button className="btn btn-dark" style={{width:'120px'}} onClick={handleWeek}>1 Week</button>
+                        
                     </div>
                     <div className="col-md-6 text-center">
-                    <button className="btn btn-dark" style={{width:'120px'}} onClick={handleDay}>1 Day</button>
+                    
                     </div>
                 </div>
                 <div className="row mt-2">
                     <div className="col-md-6 text-center">
-                        <button className="btn btn-dark" style={{width:'120px'}} onClick={handleHalfDay}>12 Hours</button>
+                        
                     </div>
                     <div className="col-md-6 text-center">
-                    <button className="btn btn-dark" style={{width:'120px'}} onClick={handleSixH}>6 Hours</button>
+                    
                     </div>
                 </div>
                 <div className="row mt-2">
                     <div className="col-md-12 text-center">
-                        <button className="btn btn-dark" style={{width:'120px'}} onClick = {handleOneH}>1 Hour</button>
+                        
                     </div>
                     
                 </div>
