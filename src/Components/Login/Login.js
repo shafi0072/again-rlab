@@ -21,7 +21,7 @@ const Login = () => {
 
     
 
-    const { from } = location.state || { from: { pathname: "/" } };
+    const { from } = location.state || { from: { pathname: "/location" } };
 
     const [click, setClick] = useState({
         login: true,

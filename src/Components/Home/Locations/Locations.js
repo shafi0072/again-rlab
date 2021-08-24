@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { userContext } from '../../../App';
-import LocationUser from './LocationUser';
+
 
 import './Location.css';
 import '../../../responsive.css'
 
-
+import { Form} from 'semantic-ui-react'
 
 import { useEffect } from 'react';
 
@@ -61,46 +61,73 @@ const Locations = () => {
     },[])
     
     return (
-        <div className="container">
-           {user.admin && <div className="row d-flex justify-content-end align-items-center mt-5">
-           <form action="" onSubmit={handleSubmit}>
-                <div className="title-name mb-3 d-flex justify-content-end">
-                    <label className="text-dark location-title-text" htmlFor="locationId" style={{marginRight:'60px'}} >Location ID</label>
-                    <input className="location-title-input" type="text" id='locationId' placeholder='PlantaLiners' name="LocationID" onChange={handleChange}/>
-                </div>
-                <div className="title-name mb-3 d-flex justify-content-end">
-                    <label className="text-dark location-title-text" htmlFor="DeviceName" style={{marginRight:'56px'}}>Add Device</label>
-                    <input className="location-title-input" type="text" id='DeviceName' placeholder='Device Name' name="addDevices" onChange={handleChange}/>
-                </div>
-                <div className="d-flex justify-content-end location-button-div">
-                    <button className="btn btn-primary mb-3 location-button" style={{marginLeft:'61.6%'}} onClick={handleClick}>Add New Device</button>
-                </div>
+        <div className="mainFormWidth mt-5">
+           {user.admin && <div className="deviceMainForm">
+           <Form unstackable="unstackable" onSubmit={handleSubmit} className="">
                 
-                 
-                {addDevices.click && <div>
-                <div className="title-name mb-3 d-flex justify-content-end">
-                    <label className="text-dark location-title-text" htmlFor="modelOfDevice" style={{marginRight:'60px'}}>Device_id_1</label>
-                    <input className="location-title-input" type="text" id='modeOfDevice' placeholder='Meter_ABC' name="Device_id_1" onChange={handleChange}/>
-                </div>
-                <div className="title-name mb-3 d-flex justify-content-end">
-                    <label className="text-dark location-title-text" htmlFor="modelOfDevice" style={{marginRight:'60px'}}>Device_id_2</label>
-                    <input className="location-title-input" type="text" id='modeOfDevice' placeholder='Meter_ABC' name="Device_id_2" onChange={handleChange}/>
-                </div>
-                <div className="title-name mb-3 d-flex justify-content-end">
-                    <label className="text-dark location-title-text" htmlFor="modelOfDevice" style={{marginRight:'60px'}}>Device_id_3</label>
-                    <input className="location-title-input" type="text" id='modeOfDevice' placeholder='Meter_ABC' name="Device_id_3" onChange={handleChange}/>
-                </div>
+                <Form.Group widths={2}>
+                    <Form.Input
+                        required
+                        label='Location ID'
+                        name="LocationID"
+                        onChange={handleChange}
+                        placeholder='PlantaLiners'/>
+
+                </Form.Group>
+               
+                <Form.Group widths={2}>
+                    <Form.Input
+                        required
+                        label='Add Device'
+                        name="addDevices"
+                        onChange={handleChange}
+                        placeholder='Device Name'/>
+
+                </Form.Group>
+                <button className="btn btn-Custom" onClick={handleClick}>Add New Device</button>
+                {addDevices.click && <div className="mt-3">
+                <Form.Group widths={2}>
+                    <Form.Input
+                        required
+                        label='Device_id_1'
+                        name="Device_id_1"
+                        onChange={handleChange}
+                        placeholder='Meter_ABC'/>
+
+                </Form.Group>
+               
+                <Form.Group widths={2}>
+                    <Form.Input
+                        required
+                        label='Device_id_2'
+                        name="Device_id_2"
+                        onChange={handleChange}
+                        placeholder='Meter_ABC'/>
+
+                </Form.Group>
+               
+                <Form.Group widths={2}>
+                    <Form.Input
+                        required
+                        label='Device_id_3'
+                        name="Device_id_3"
+                        onChange={handleChange}
+                        placeholder='Meter_ABC'/>
+
+                </Form.Group>
                 </div>}
             
-                <div className="title-name mb-3 d-flex justify-content-end">
-                    <label className="text-dark file-text location-title-text" htmlFor="image">Image</label>
-                    <input className="location-title-input" type="file" id='image' placeholder='30.5'/>
-                </div>
-                <div className="d-flex justify-content-end location-button-div">
-                    <button className="btn btn-primary location-button" style={{marginLeft:'65%'}} type="submit">Create/Save</button>
-                </div>
+               
+                <Form.Group widths={2}>
+                    <Form.Input
+                    type="file"
+                        required
+                        label='Image'
+                        placeholder='30.5'/>
+                </Form.Group>
                 
-            </form>
+                <button className="btn btn-Custom"  type="submit">Create/Save</button>
+            </Form>
             </div>}
                 
             
