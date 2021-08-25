@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Command.css';
 import db from '../../FirebaseConfig/Firebase';
 
-
+import { Form } from 'semantic-ui-react'
 
 const Command = () => {
     const [pubSubM, setPubSubM] = useState({
@@ -27,24 +27,32 @@ const handleSubmit = (e) => {
 }
 
     return (
-        <div className="command-main-container mb-5">
-            <h1 className='text-dark command-title'>Send command in Google Cloud Pub/sub</h1>
-            <div className="command-container">
-                <form action="" onSubmit={handleSubmit}>
-                    <div className="d-flex justify-content-end topic-container">
-                        <label className="command-text text-dark" htmlFor="topic">Device_id:</label>
-                        <input className="command-input text-dark" type="text" placeholder="Device_id" name="Device_id" id="topic" onChange={handleOnChange}/>
-                    </div>
-                    
-                    <div className="d-flex justify-content-end topic-container">
-                        <label className="command-text text-dark" htmlFor="sub">Command:</label>
-                        <textarea className="command-input" placeholder="Command" id="Command" name="Command" onChange={handleOnChange}/>
-                    </div>
-                    <div className="text-end">
-                        <button className="btn btn-primary command-button" type="submit" >Send</button>
-                    </div>
-                    
-                </form>
+        <div className="mainFormWidth mb-5">
+            
+            <div className="deviceMainForm">
+                <Form unstackable="unstackable" onSubmit={handleSubmit}>
+                
+                    <Form.Group widths={2}>
+                    <Form.Input
+                        required
+                        label='Device_id:'
+                        name="Device_id"
+                        onChange={handleOnChange}
+                        placeholder='Device_id'/>
+
+                </Form.Group>
+                    <Form.Group widths={2}>
+                    <Form.TextArea
+                        required
+                        label='Command:'
+                        name="Command"
+                        onChange={handleOnChange}
+                        placeholder='Command'/>
+
+                </Form.Group>
+                <p className="text-success">Click to send command</p>
+                <button className="btn btn-Custom"  type="submit">Send</button>
+                </Form>
             </div>
         </div>
     );
