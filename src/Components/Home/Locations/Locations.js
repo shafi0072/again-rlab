@@ -48,6 +48,7 @@ const Locations = () => {
         const newLocationData = {...locationData};
         newLocationData[e.target.name] = e.target.value;
         setLocationData(newLocationData)
+        console.log(newLocationData)
     }; 
     useEffect(() => {
         const userDb =  db.collection("location").onSnapshot((querySnapshot) => {
@@ -126,7 +127,7 @@ const Locations = () => {
                         placeholder='30.5'/>
                 </Form.Group>
                 
-                <button className="btn btn-Custom"  type="submit">Create/Save</button>
+                <button className="btn btn-Custom" type="submit">Create/Save</button>
             </Form>
             </div>}
                 

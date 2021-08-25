@@ -99,7 +99,7 @@ const UserForm = () => {
                     <label htmlFor="position"  className='me-5 text-dark interface-name'><h5>Position</h5></label>
                     <input type="text" id='position' placeholder='Enter Your position' className='form-control' name="position" onChange={handleOnchange}/>
                 </div>
-                {error.notError && <button className="btn btn-primary create-button" type="submit">Create/Save</button>}
+                {error.notError && <button className="btn btn-success create-button" type="submit">Create/Save</button>}
                 {error.notError===false && <p className="text-danger">This email user Already created. please try with another email.</p>}
             </form>
         </div>

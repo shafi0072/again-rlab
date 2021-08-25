@@ -32,15 +32,17 @@ const UserHome = () => {
             <div className="col-md-1">
                  <Navbar/>
             </div>
-            <div className="col-md-11 backgroundSIDE text-center">
+            <div className="col-md-12 backgroundSIDE text-center" style={{position:'absolute'}}>
+            
             
             <img src={logo} alt="" style={{width:'20%'}} className='mt-5' />
                 <User data={dbUserData}/>
+            </div>
 
                 
                
                 
-            </div>
+            
         </div>
     );
 };
