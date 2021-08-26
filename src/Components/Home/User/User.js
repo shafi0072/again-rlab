@@ -1,11 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './user.css';
 import '../../../responsive.css';
 import UserForm from './UserForm';
 
 import UserData from './UserData';
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+
 const User = (props) => {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
 
     const [click, setClick] = useState({clickToUser: true, clickToFrom: false});
     const handleClick = () => {
@@ -16,8 +26,20 @@ const User = (props) => {
         newClick.clickToUser = false;
         setClick(newClick)
     }
+ useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
 
-    const data = props.data;
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
+
+    const data = props.data
+    var x = window.width;
+    console.log({windowDimensions})
     return (
         <div className='mt-5 text-center'>
             {
