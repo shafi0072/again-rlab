@@ -2386,7 +2386,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 0%;
+    width: 120px;
     background: #11101D;
     padding: 6px 14px;
     z-index: 100;
@@ -2420,8 +2420,8 @@
   .sidebar .logo-details #btn{
     position: absolute;
     top: 40%;
-    left: 115%;
-    color: black;
+    left: 0%;
+    color: white;
     transform: translateY(-59%);
     font-size: 30px;
     transition: all 0.4s ease-in-out;
@@ -2433,7 +2433,7 @@
   }
   .sidebar.open .logo-details #btn{
     text-align: left;
-    margin-left: -99%;
+    
     margin-top: 3%;
     color: rgb(255 255 255);
 

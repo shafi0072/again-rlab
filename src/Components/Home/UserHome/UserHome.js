@@ -4,7 +4,7 @@ import './UserHome.css'
 import User from '../User/User'
 import logo from '../../../Resorces/logo_RLAB.png';
 
-
+import MenuIcon from '@material-ui/icons/Menu';
 import db from '../../FirebaseConfig/Firebase'
 
 function getWindowDimensions() {
@@ -50,8 +50,12 @@ const UserHome = () => {
             <div className="col-md-12 backgroundSIDE text-center" style={{position:'absolute'}}>
             
             
+            
+            <div className="d-flex  align-items-center justify-content-between ">
             <img src={logo} alt="" style={{width:'20%'}} className='mt-5' />
-            <button onClick={() => setSideMenu(true)}>Hello </button>
+            {!sideMenu &&<button onClick={() => setSideMenu(true)} className="btn btn-success mt-3"><MenuIcon/></button>}
+            {sideMenu &&<button onClick={() => setSideMenu(false)} className="btn btn-success mt-3"><MenuIcon/></button>}
+            </div>
                 <User data={dbUserData}/>
             </div>
 
