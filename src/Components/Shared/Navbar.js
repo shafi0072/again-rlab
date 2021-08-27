@@ -5,10 +5,20 @@ import {Link} from 'react-router-dom'
 import {useContext} from 'react';
 import {userContext} from './../../App';
 import {useHistory, useLocation} from 'react-router-dom';
-import db from '../FirebaseConfig/Firebase'
+import db from '../FirebaseConfig/Firebase';
+
+
+async function getWindowDimensions() {
+    const {innerWidth: width, innerHeight: height} = await window;
+    return {width, height};
+}
+
 const Navbar = () => {
 
    
+    
+    
+
     
 
     const history = useHistory();
@@ -33,6 +43,7 @@ const Navbar = () => {
         setLocationView(newClick);
     };
 
+    
   
 
     // following are the code to change sidebar button(optional)
@@ -76,10 +87,14 @@ const Navbar = () => {
         });
         return userDb;
     }, [locations]);
-
+    
+    
     return (
         <div>
-            <div className="sidebar">
+            <div className="container pt-5" >
+            
+            </div>
+           <div className="sidebar">
                 <div className="logo-details">
 
                     <div className="logo_name">RLAB</div>
@@ -130,6 +145,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+           
             <section className="home-section"></section>
         </div>
     );
