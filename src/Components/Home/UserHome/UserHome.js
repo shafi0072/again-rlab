@@ -50,11 +50,11 @@ const UserHome = () => {
             <div className="col-md-12 backgroundSIDE text-center" style={{position:'absolute'}}>
             
             
-            
-            <div className="d-flex  align-items-center justify-content-between ">
-            <img src={logo} alt="" style={{width:'20%'}} className='mt-5' />
-            {!sideMenu &&<button onClick={() => setSideMenu(true)} className="btn btn-success mt-3"><MenuIcon/></button>}
-            {sideMenu &&<button onClick={() => setSideMenu(false)} className="btn btn-success mt-3"><MenuIcon/></button>}
+            {!sideMenu && windowDimensions.width > 710 && <img src={logo} alt="" style={{width:'10%'}} className='mt-5'/>}
+            <div className="d-flex align-items-center justify-content-between ">
+            {windowDimensions.width < 710 &&  <img src={logo} alt="" style={{width:'30%'}} className='mt-5'/>}
+            {!sideMenu && windowDimensions.width < 710 && <button onClick={() => setSideMenu(true)} className="btn btn-success mt-3"><MenuIcon/></button>}
+            {sideMenu   &&<button onClick={() => setSideMenu(false)} className="btn btn-success mt-3"><MenuIcon/></button>}
             </div>
                 <User data={dbUserData}/>
             </div>
